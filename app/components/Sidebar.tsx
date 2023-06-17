@@ -1,13 +1,52 @@
 "use client";
-import React from 'react'
+import { useState } from "react";
+import Link from "next/link";
+import { AiOutlineMenu } from "react-icons/ai";
 
-export default function Sidebar() { 
+export default function Sidebar() {
+  const [openMenu, setMenuOpen] = useState(false);
+  const handleMenu = () => {
+    setMenuOpen(!openMenu);
+  };
   return (
-<div className="bg-gray-900 flex flex-col">
-  <div className="flex flex-row items-center p-2 gap-3 w-52 h-10 rounded-md"> Home </div>
-  <div className="flex flex-row items-center p-2 gap-3 w-52 h-10 rounded-md"> About me</div>
-  <div className="flex flex-row items-center p-2 gap-3 w-52 h-10 rounded-md"> Tech Stack</div>
-  <div className="flex flex-row items-center p-2 gap-3 w-52 h-10 rounded-md"> Projects</div>
-  <div className="flex flex-row items-center p-2 gap-3 w-52 h-10 rounded-md"> Contact</div>
-</div> )
+    <nav>
+      <div className="md:hidden py-5 px-5">
+        <AiOutlineMenu
+          className="md:hidden text-2xl cursor-pointer"
+          onClick={handleMenu}
+        />
+      </div>
+
+      {/* Desktop Menu */}
+      <div className="hidden md:block md:w-80 items-center h-screen bg-gray-one shadow-xl">
+        <ul className="flex flex-col items-center justify-center h-full">
+          <li className="p-3 text-center text-stone-one font-semibold border-b w-full border-gray-two hover:border-orange-300 hover:text-orange-300 ease-in-out duration-500">
+            <Link href="/">HOME</Link>
+          </li>
+
+          <li className="p-3 text-center text-stone-one font-semibold border-b w-full border-gray-two hover:border-orange-300 hover:text-orange-300 ease-in-out duration-500">
+            <Link href="/about">ABOUT</Link>
+          </li>
+
+          <li className="p-3 text-center text-stone-one font-semibold border-b w-full border-gray-two hover:border-orange-300 hover:text-orange-300 ease-in-out duration-500">
+            <Link className="px-5 py-4" href="/techstack">
+              TECH STACK
+            </Link>
+          </li>
+
+          <li className="p-3 text-center text-stone-one font-semibold border-b w-full border-gray-two hover:border-orange-300 hover:text-orange-300 ease-in-out duration-500">
+            <Link className="px-5 py-4" href="/techstack">
+              PROJECTS
+            </Link>
+          </li>
+
+          <li className="p-3 text-stone-one font-semibold hover:text-orange-300 ease-in-out duration-500">
+            <Link className="px-5 py-4" href="/techstack">
+              CONTACT
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
 }

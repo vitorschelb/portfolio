@@ -1,10 +1,15 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import Sidebar from "./components/Sidebar";
 import { Metadata } from "next";
 import { PropsWithChildren } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Vitor Schelb Portfolio",
@@ -14,11 +19,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
-      <body className="grid grid-cols-6">
-        <div className="bg-gray-200 col-span-1">
+      <body className={montserrat.className}>
+        <div className="flex">
           <Sidebar />
+          {children}
         </div>
-        <div className="bg-gray-200 col-span-5">{children}</div>
       </body>
     </html>
   );
