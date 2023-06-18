@@ -9,17 +9,16 @@ export default function Sidebar() {
     setMenuOpen(!openMenu);
   };
   return (
-    <nav>
-      <div className="md:hidden py-5 px-5">
+    <nav className="">
+      <div className="md:hidden absolute px-5 py-5">
         <AiOutlineMenu
-          className="md:hidden text-2xl cursor-pointer"
+          className="text-2xl cursor-pointer "
           onClick={handleMenu}
         />
       </div>
 
       {/* Desktop Menu */}
-      {/* TODO: QUEBRAR EM VARIOS SIZES
-      TODO: ARRUMAR MENU HAMBUERGUER */}
+
       <div className="hidden md:block md:w-80 items-center h-screen bg-gray-one shadow-xl">
         <ul className="flex flex-col items-center justify-center h-full">
           <li className="p-3 text-center text-stone-one font-semibold border-b w-full border-gray-two hover:border-orange-300 hover:text-orange-300 ease-in-out duration-500">

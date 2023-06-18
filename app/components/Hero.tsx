@@ -1,13 +1,14 @@
 import Image from "next/image";
 import home from "../../public/home.png";
 
+
 export default function Hero() {
   return (
     <section className="h-screen grid grid-cols-2 gap-10 bg-stone-one md:pl-20 2xl:pl-36 ">
       <div className="flex flex-col justify-center space-y-4">
         <div className="mb-8">
           <h1 className="mb-6 tracking-widest">Hello there, my name is</h1>
-          <h2 className="text-4xl tracking-widest font-bold text-gray-bold">
+          <h2 className="text-4xl tracking-widest font-poppins text-gray-bold">
             &lt; VITOR SCHELB /&gt;
           </h2>
         </div>

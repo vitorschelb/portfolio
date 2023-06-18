@@ -1,17 +1,12 @@
 import "./globals.css";
-import { Montserrat } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import Sidebar from "./components/Sidebar";
 import { Metadata } from "next";
 import { PropsWithChildren } from "react";
 
+const openSans = Open_Sans({ subsets: ["latin"] });
 
-/* Adicionar font corretamente */
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
+
 
 export const metadata: Metadata = {
   title: "Vitor Schelb Portfolio",
@@ -21,7 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body className={openSans.className}>
         <div className="flex">
           <Sidebar />
           {children}
