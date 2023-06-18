@@ -4,6 +4,8 @@ import Sidebar from "./components/Sidebar";
 import { Metadata } from "next";
 import { PropsWithChildren } from "react";
 
+
+/* Adicionar font corretamente */
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "700"],

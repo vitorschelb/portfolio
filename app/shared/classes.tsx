@@ -1,0 +1,2 @@
+export const buttonTwoXL = "py-2 h-10 w-40 bg-gray-bold text-stone-one font-semibold tracking-widest text-sm"
+export const buttonML = "py-2 h-10 w-40 bg-gray-bold text-stone-one font-bold tracking-widest text-2xl"
