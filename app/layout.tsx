@@ -6,8 +6,6 @@ import { PropsWithChildren } from "react";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
-
-
 export const metadata: Metadata = {
   title: "Vitor Schelb Portfolio",
   description: "This is my personal website.",

@@ -8,10 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "gray-zero": "rgb(125, 119, 137)",
         "gray-one": "rgb(89, 88, 87)",
         "gray-two": "rgb(140, 137, 135)",
+        "gray-three": "rgb(51, 51, 51)",
         "gray-bold": "rgb(13, 13, 13)",
         "stone-one": "rgb(242, 236, 233)",
+        "clean-white": "rgb(246, 251, 255)"
       },
     },
     fontFamily: { 
