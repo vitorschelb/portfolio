@@ -3,6 +3,7 @@ import { Open_Sans } from "next/font/google";
 import Sidebar from "./components/Sidebar";
 import { Metadata } from "next";
 import { PropsWithChildren } from "react";
+import PreLoader from "./components/PreLoader";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -15,10 +16,12 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body className={openSans.className}>
+      <PreLoader>
         <div className="flex">
-          <Sidebar />
-          {children}
+            <Sidebar />
+            {children}
         </div>
+        </PreLoader>
       </body>
     </html>
   );

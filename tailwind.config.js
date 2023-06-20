@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -14,12 +14,23 @@ module.exports = {
         "gray-three": "rgb(51, 51, 51)",
         "gray-bold": "rgb(13, 13, 13)",
         "stone-one": "rgb(242, 236, 233)",
-        "clean-white": "rgb(246, 251, 255)"
+        "clean-white": "rgb(246, 251, 255)",
+      },
+      keyframes: {
+        grow: {
+          "0%": { "height": "0", "border-color": "rgb(246, 251, 255)" },
+          "100%": { "height": "100%", "border-color": "rgb(51, 51, 51)"},
+
+        },
+      },
+      animation: {
+        grow: "grow 1.5s ease-in-out",
       },
     },
-    fontFamily: { 
+
+    fontFamily: {
       poppins: ["Poppins", "sans-serif"],
-    }
+    },
   },
   plugins: [],
-}
+};
