@@ -1,7 +1,7 @@
 "use client";
 import { PropsWithChildren } from "react";
 
-import { motion, AnimatePresence, animate } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function PreLoader({ children }: PropsWithChildren) {
 
