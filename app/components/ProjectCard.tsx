@@ -1,8 +1,13 @@
 
 import { SiGithub } from "react-icons/si";
 import { FiExternalLink } from "react-icons/fi";
-import { ProjectProp } from "../shared/types";
 import Link from "next/link";
+import { Project } from "../shared/projectsData";
+
+type ProjectProp = {
+  project: Project;
+};
+
 
 export default function ProjectCard({project}: ProjectProp) {
   return (
