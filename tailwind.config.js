@@ -14,6 +14,7 @@ module.exports = {
         "gray-three": "rgb(51, 51, 51)",
         "gray-bold": "rgb(13, 13, 13)",
         "stone-one": "rgb(242, 236, 233)",
+        "stone-white": "rgb(217, 217, 217)",
         "clean-white": "rgb(246, 251, 255)",
       },
       keyframes: {
@@ -30,6 +31,7 @@ module.exports = {
 
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
+      firacode: ["Fira Code", "monospace"]
     },
     letterSpacing: {
       super: "0.3em",

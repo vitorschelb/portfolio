@@ -8,7 +8,7 @@ const projectsData: Project[] = [
     image: one,
     repoURL: "https://github.com/nicolasbrandao/fake-store",
     deployURL: "/",
-    title: "LiteraryAmbience",
+    title: "BookAura",
     description:
       "Transforme trechos de livros em experiências imersivas. Narração, som e animações trazem cada página à vida. Descubra a magia da leitura.",
     technologies: "Next TypeScript Tailwind Framer-Motion",
@@ -18,10 +18,10 @@ const projectsData: Project[] = [
     image: three,
     repoURL: "https://github.com/nicolasbrandao/fake-store",
     deployURL: "/",
-    title: "TourCompanion",
+    title: "TourBuddy",
     description:
-      "Descubra passeios personalizados, guias avaliados e preços transparentes em uma plataforma intuitiva. Explore o mundo com confiança ao lado dos melhores guias locais.",
-    technologies: "Next Prisma TypeScript Tailwind",
+      "Descubra passeios e guias avaliados em uma plataforma intuitiva. Explore o mundo com confiança ao lado dos melhores guias locais.",
+    technologies: "Next TypeScript Tailwind Prisma",
   },
 ];
 export default projectsData;

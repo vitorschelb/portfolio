@@ -16,11 +16,11 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body className={openSans.className}>
-      <PreLoader>
-        <div className="flex">
+        <PreLoader>
+          <div className="h-screen flex flex-row justify-start">
             <Sidebar />
-            {children}
-        </div>
+            <div className="flex-1">{children}</div>
+          </div>
         </PreLoader>
       </body>
     </html>
