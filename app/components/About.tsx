@@ -5,7 +5,7 @@ import { AiFillCaretRight } from "react-icons/ai";
 
 export default function About() {
   return (
-    <section className="grid-cols-1 grid h-screen px-8 bg-clean-white md:pl-20 2xl:pl-36 md:grid-cols-2 md:gap-10">
+    <section className="grid-cols-1 h-screen grid px-8 bg-clean-white md:pl-20 2xl:pl-36 md:grid-cols-2 md:gap-10">
       <div className="flex flex-col justify-center">
         <div className="flex items-center justify-around mb-6">
           <h1 className="tracking-super font-poppins font-bold mr-10">ABOUT</h1>

@@ -1,6 +1,16 @@
-import { Project } from "./types";
 import one from "../../public/one.jpg";
 import three from "../../public/three.jpg";
+import { StaticImageData } from "next/image";
+
+export type Project = {
+  id: string;
+  image: StaticImageData;
+  repoURL: string;
+  deployURL: string;
+  title: string;
+  description: string;
+  technologies: string;
+};
 
 const projectsData: Project[] = [
   {
@@ -24,4 +34,5 @@ const projectsData: Project[] = [
     technologies: "Next TypeScript Tailwind Prisma",
   },
 ];
+
 export default projectsData;

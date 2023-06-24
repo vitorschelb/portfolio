@@ -1,6 +1,5 @@
 "use client";
 import ProjectsCarousel from "./ProjectsCarousel";
-import projectsData from "../shared/projectsData";
 
 
 export default function Projects() {
@@ -12,7 +11,7 @@ export default function Projects() {
           <span className="w-full border-gray-zero border-b" />
         </div>
         <div className="">
-          <ProjectsCarousel projects={projectsData} />
+          <ProjectsCarousel />
         </div>
       
     </section>

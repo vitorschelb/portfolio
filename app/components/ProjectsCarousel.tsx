@@ -3,10 +3,10 @@
 import Image from "next/image";
 import ProjectCard from "./ProjectCard";
 import { useState } from "react";
-import { ProjectCarouselProps } from "../shared/types";
+import projectsData from "../shared/projectsData";
 
-export default function ProjectsCarousel({ projects}: ProjectCarouselProps) {
-  const slides = projects.map((project) => project.image);
+export default function ProjectsCarousel() {
+  const slides = projectsData.map((project) => project.image);
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -42,7 +42,7 @@ export default function ProjectsCarousel({ projects}: ProjectCarouselProps) {
         </div>
 
         <div className="">
-          <ProjectCard project={projects[currentIndex]} />
+          <ProjectCard project={projectsData[currentIndex]} />
         </div>
       </div>
 
