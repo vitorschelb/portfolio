@@ -19,9 +19,8 @@ module.exports = {
       },
       keyframes: {
         grow: {
-          "0%": { "height": "0", "border-color": "rgb(246, 251, 255)" },
-          "100%": { "height": "100%", "border-color": "rgb(51, 51, 51)"},
-
+          "0%": { height: "0", "border-color": "rgb(246, 251, 255)" },
+          "100%": { height: "100%", "border-color": "rgb(51, 51, 51)" },
         },
       },
       animation: {
@@ -31,11 +30,11 @@ module.exports = {
 
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
-      firacode: ["Fira Code", "monospace"]
+      firacode: ["Fira Code", "monospace"],
     },
     letterSpacing: {
       super: "0.3em",
-    }
+    },
   },
   plugins: [],
 };

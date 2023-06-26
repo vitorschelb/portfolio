@@ -4,6 +4,42 @@ import Image from "next/image";
 import ProjectCard from "./ProjectCard";
 import { useState } from "react";
 import projectsData from "../shared/projectsData";
+import { AnimatePresence, motion } from "framer-motion";
+
+const variants = {
+  initial: {
+    x: -50,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      x: {
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+      },
+      opacity: {
+        duration: 0.2,
+      },
+    },
+  },
+  exit: {
+    x: 50,
+    opacity: 0,
+    transition: {
+      x: {
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+      },
+      opacity: {
+        duration: 0.2,
+      },
+    },
+  },
+};
 
 export default function ProjectsCarousel() {
   const slides = projectsData.map((project) => project.image);
@@ -22,39 +58,48 @@ export default function ProjectsCarousel() {
     setCurrentIndex(newIndex);
   };
 
+  // Fazer marcação de avanço
+
   const goToSlide = (slideIndex: number) => {
     setCurrentIndex(slideIndex);
   };
-  //No lugar dos botoes de passar com group hover, adicionar o cartão de cada projeto. RELATIVE GROUP NA MAIN DIV QUE TIREI
-  //Tranferir os botões do interior para baixo como previous e next
-  //    src={slides[currentIndex]}
+
   return (
-    <div className="flex flex-col w-full ">
-      <div className="flex items-center justify-around">
-        <div className="flex flex-1 md:max-w-sm md:max-h-sm 2xl:max-w-xl 2xl:max-h-xl">
-          <Image
-            src={slides[currentIndex]}
-            alt="one"
-            width={500}
-            height={400}
-            className="object-cover h-full w-full"
-          />
-        </div>
+    <div className="flex flex-col">
+      <AnimatePresence initial={false} mode="wait">
+        <motion.div
+          key={currentIndex}
+          variants={variants}
+          animate="animate"
+          initial="initial"
+          exit="exit"
+          className="grid items-center justify-around md:flex"
+        >
+          <div className="flex md:max-w-lg 2xl:max-w-2xl  bg-gray-three bg-opacity-20 p-4 shadow-md">
+            <Image
+              src={slides[currentIndex]}
+              alt="one"
+              width={1000}
+              height={1000}
+              className="object-cover h-full w-full shadow-md"
+            />
+          </div>
 
-        <div className="">
-          <ProjectCard project={projectsData[currentIndex]} />
-        </div>
-      </div>
+          <div className="flex">
+            <ProjectCard project={projectsData[currentIndex]} />
+          </div>
+        </motion.div>
+      </AnimatePresence>
 
-      <div className="flex justify-around">
+      <div className="mt-10 flex justify-evenly">
         <button
-          className="p-2 w-28 bg-gray-three text-clean-white font-poppins font-medium border-gray-three border-2 cursor-pointer hover:underline hover:bg-clean-white hover:text-gray-three ease-in-out duration-500 "
+          className="p-6 w-44 bg-gray-three text-clean-white font-poppins font-medium border-gray-three border-2 shadow-md hover:underline hover:bg-clean-white hover:text-gray-three ease-in-out duration-500"
           onClick={prevSlide}
         >
           PREVIOUS
         </button>
         <button
-          className="p-2 w-28 bg-gray-three text-clean-white font-poppins font-medium border-gray-three border-2 cursor-pointer hover:underline hover:bg-clean-white hover:text-gray-three ease-in-out duration-500 "
+          className="p-6 w-44 bg-gray-three text-clean-white font-poppins font-medium border-gray-three border-2 shadow-md hover:underline hover:bg-clean-white hover:text-gray-three ease-in-out duration-500"
           onClick={nextSlide}
         >
           NEXT
@@ -63,15 +108,3 @@ export default function ProjectsCarousel() {
     </div>
   );
 }
-
-//      <div className="flex top-4 justify-center py-2">
-// {slides.map((_, slideIndex) => (
-//   <div
-//     key={slideIndex}
-//     onClick={() => goToSlide(slideIndex)}
-//     className="text-2xl cursor-pointer"
-//   >
-//     <RxDotFilled />
-//   </div>
-// ))}
-// </div>

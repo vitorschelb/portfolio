@@ -8,10 +8,10 @@ type ProjectProp = {
   project: Project;
 };
 
-
+//Organizar
 export default function ProjectCard({project}: ProjectProp) {
   return (
-    <div className="flex flex-col h-fit w-full md:w-[300px] p-4 bg-gray-three bg-opacity-20 justify-between shadow-md">
+    <div className="flex flex-col h-full w-full md:max-w-[300px] p-4 bg-gray-three bg-opacity-20 justify-between shadow-md">
         
       <div className="flex items-center mb-6">
         <h1 className="font-bold tracking-widest text-lg font-poppins">{project.title}</h1>
@@ -26,7 +26,7 @@ export default function ProjectCard({project}: ProjectProp) {
       <p className="text-justify font-medium font-firacode text-sm">{project.technologies}</p>
       </div>
 
-      <div className="flex justify-end text-2xl mt-4 text-gray-three">
+      <div className="flex justify-end text-2xl mt-4 gap-2 text-gray-three">
         <Link href="/" />
         <SiGithub />
 

@@ -5,7 +5,7 @@ import Typed from "react-typed";
 
 export default function Hero() {
   return (
-    <section className="grid-cols-1 grid h-screen px-8 bg-clean-white md:pl-20 2xl:pl-36 md:grid-cols-2 md:gap-10">
+    <section className="grid-cols-1 grid h-screen px-8 bg-clean-white md:px-20 2xl:px-36 md:grid-cols-2 md:gap-10">
       <div className="flex flex-col justify-center">
         <h1 className="mb-8 tracking-widest">Hello there, my name is</h1>
         <h2 className="mb-6 text-gray-three font-poppins font-bold text-5xl">
@@ -29,7 +29,7 @@ export default function Hero() {
           optimal solutions for both users and code maintainers.
         </p>
 
-        <button className="p-6 w-44 bg-gray-three text-clean-white font-poppins font-medium border-gray-three border-2 hover:underline hover:bg-clean-white hover:text-gray-three ease-in-out duration-500 ">
+        <button className="p-6 w-44 bg-gray-three text-clean-white font-poppins font-medium border-gray-three border-2 shadow-md hover:underline hover:bg-clean-white hover:text-gray-three ease-in-out duration-500">
           <span>DOWNLOAD CV</span>
         </button>
       </div>

@@ -9,7 +9,7 @@ export default function MobileNavbar() {
   };
 
   return (
-    <nav className="md:hidden">
+    <nav className="lg:hidden">
       <div className="px-5 py-5 absolute">
         <AiOutlineMenu
           className="text-2xl cursor-pointer"
@@ -48,7 +48,7 @@ export default function MobileNavbar() {
           </li>
 
           <li className="p-3 w-full text-center border-gray-two border-b">
-            <Link onClick={handleMenu} className="px-5 py-4" href="/techstack">
+            <Link onClick={handleMenu} className="px-5 py-4" href="/projects">
               PROJECTS
             </Link>
           </li>

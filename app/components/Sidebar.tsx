@@ -11,7 +11,7 @@ export default function Sidebar() {
 
       {/* Desktop Menu */}
 
-      <div className="h-screen items-center p-3 bg-gray-three text-clean-white font-poppins font-medium text-center shadow-xl hidden md:block md:w-64">
+      <div className="h-screen items-center p-3 bg-gray-three text-clean-white font-poppins font-medium text-center shadow-xl hidden lg:block lg:w-64">
         <ul className="flex flex-col items-center justify-center h-full">
           <li className="p-3 border-b w-full border-gray-two hover:text-gray-three  hover:bg-white ease-in-out duration-500">
             <Link href="/">HOME</Link>
