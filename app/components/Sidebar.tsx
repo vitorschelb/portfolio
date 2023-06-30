@@ -34,7 +34,7 @@ export default function Sidebar() {
           </li>
 
           <li className="p-3 w-full hover:text-gray-three hover:bg-white ease-in-out duration-500">
-            <Link className="px-5 py-4" href="/techstack">
+            <Link className="px-5 py-4" href="/contact">
               CONTACT
             </Link>
           </li>
