@@ -6,6 +6,7 @@ import { Metadata } from "next";
 import { PropsWithChildren } from "react";
 import PreLoader from "./components/PreLoader";
 
+
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,7 +21,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <PreLoader>
           <div className="h-screen flex flex-row justify-start">
             <Sidebar />
-            <div className="flex-1">{children}</div>
+            <div className="flex-1">
+              {children}
+            </div>
           </div>
         </PreLoader>
       </body>

@@ -8,7 +8,7 @@ type FeedBack = {
 };
 
 export async function POST(request: Request) {
-  const body: Partial<FeedBack> = await request.json();
+  const body: FeedBack = await request.json();
 
   // Basic server side validation
   if (!body.name || !body.email || !body.message) {
@@ -23,7 +23,7 @@ export async function POST(request: Request) {
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
-    secure: true,
+    secure: true, //Update later with STARTTLS. Study about safe.
     auth: {
       user,
       pass,
@@ -44,8 +44,6 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ message: "success" });
   } catch (error) {
-    console.error(error);
-
     return NextResponse.json({ message: "An error occurred" });
   }
 }

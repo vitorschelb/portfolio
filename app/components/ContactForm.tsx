@@ -1,14 +1,16 @@
 "use client";
 import { ChangeEvent, FormEvent, useState } from "react";
+import { Box, useToast } from "@chakra-ui/react";
 
-const initState = { name: "", email: "", message: "" };
+const initState = { IsLoading: false, name: "", email: "", message: "" };
 
 type InputChangeEvent = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [state, setState] = useState(initState);
-  const [error, setError] = useState<string | null>(null);
+
+  const toast = useToast();
 
   const handleChange = ({ target }: InputChangeEvent) => {
     setState((prev) => ({
@@ -20,14 +22,6 @@ export default function ContactForm() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setLoading(true);
-    setError(null);
-
-    // Basic client-side validation
-    if (!state.name || !state.email || !state.message) {
-      setLoading(false);
-      setError("Please fill all fields");
-      return;
-    }
 
     const response = await fetch("/api/contact", {
       method: "POST",
@@ -42,11 +36,27 @@ export default function ContactForm() {
     if (response.ok) {
       console.log("Message sent");
       setState(initState);
-      // Implement redirect to success route
+      toast({
+        status: "success",
+        duration: 2000,
+        position: "bottom-right",
+        render: () => (
+          <Box color="white" p={3} textAlign="center" bg="rgb(140, 137, 135)">
+            Message sent
+          </Box>
+        ),
+      });
     } else {
-      console.log("Message not send");
-      setError("Message could not be sent. Please try again.");
-      // Implement error UI
+      toast({
+        status: "success",
+        duration: 2000,
+        position: "bottom-right",
+        render: () => (
+          <Box color="white" p={3} textAlign="center" bg="red.400">
+            {"Message not sent :("}
+          </Box>
+        ),
+      });
     }
   }
 
