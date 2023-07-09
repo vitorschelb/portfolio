@@ -54,7 +54,7 @@ export default function MobileNavbar() {
           </li>
 
           <li className="p-3 w-full text-center">
-            <Link onClick={handleMenu} className="px-5 py-4" href="/techstack">
+            <Link onClick={handleMenu} className="px-5 py-4" href="/contact">
               CONTACT
             </Link>
           </li>
