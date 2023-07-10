@@ -1,11 +1,9 @@
-
 import "./globals.css";
 import { Open_Sans } from "next/font/google";
 import Sidebar from "./components/Sidebar";
 import { Metadata } from "next";
 import { PropsWithChildren } from "react";
 import PreLoader from "./components/PreLoader";
-
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -19,11 +17,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang="en">
       <body className={openSans.className}>
         <PreLoader>
-          <div className="h-screen flex flex-row justify-start">
+          <div className="h-screen flex flex-row justify-start overflow-hidden">
             <Sidebar />
-            <div className="flex-1">
-              {children}
-            </div>
+            <div className="flex-1">{children}</div>
           </div>
         </PreLoader>
       </body>

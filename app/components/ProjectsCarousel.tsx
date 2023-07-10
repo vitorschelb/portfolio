@@ -3,7 +3,7 @@
 import Image from "next/image";
 import ProjectCard from "./ProjectCard";
 import { useState } from "react";
-import projectsData from "../shared/projectsData";
+import projectsData from "../shared/Data";
 import { AnimatePresence, motion } from "framer-motion";
 
 const variants = {
@@ -93,16 +93,16 @@ export default function ProjectsCarousel() {
 
       <div className="mt-10 flex justify-evenly">
         <button
-          className="p-6 w-44 bg-gray-three text-clean-white font-poppins font-medium border-gray-three border-2 shadow-md hover:underline hover:bg-clean-white hover:text-gray-three ease-in-out duration-500"
+          className="p-6 w-44 bg-gray-three text-clean-white font-poppins font-medium border-gray-three border-2 shadow-sm hover:underline hover:bg-clean-white hover:shadow-md hover:text-gray-three ease-in-out duration-500"
           onClick={prevSlide}
         >
-          PREVIOUS
+          Previous
         </button>
         <button
-          className="p-6 w-44 bg-gray-three text-clean-white font-poppins font-medium border-gray-three border-2 shadow-md hover:underline hover:bg-clean-white hover:text-gray-three ease-in-out duration-500"
+          className="p-6 w-44 bg-gray-three text-clean-white font-poppins font-medium border-gray-three border-2 shadow-sm hover:underline hover:bg-clean-white hover:shadow-md hover:text-gray-three ease-in-out duration-500"
           onClick={nextSlide}
         >
-          NEXT
+          Next
         </button>
       </div>
     </div>

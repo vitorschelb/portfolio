@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import home from "../../public/home.png";
+import me from "../../public/me.jpeg";
 import { AiFillCaretRight } from "react-icons/ai";
 
 export default function About() {
@@ -39,9 +40,9 @@ export default function About() {
       <div className="h-full items-center justify-center hidden md:flex">
         <div className="h-96 w-60">
           <Image
-            src={home}
-            alt="home"
-            className="object-cover h-full w-full"
+            src={me}
+            alt="me"
+            className="object-cover h-full w-full shadow-sm"
             priority
           />
         </div>

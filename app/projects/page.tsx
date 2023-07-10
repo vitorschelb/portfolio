@@ -1,9 +1,12 @@
+import { PageTransition } from "../components/PageTransition";
 import Projects from "../components/Projects";
 
 export default function PageProjects() {
   return (
     <main>
-      <Projects />
+      <PageTransition>
+        <Projects />
+      </PageTransition>
     </main>
   );
 }

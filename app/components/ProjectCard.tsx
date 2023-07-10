@@ -2,7 +2,7 @@
 import { SiGithub } from "react-icons/si";
 import { FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
-import { Project } from "../shared/projectsData";
+import { Project } from "../shared/Data";
 
 type ProjectProp = {
   project: Project;

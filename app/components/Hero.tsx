@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import home from "../../public/home.png";
+import me from "../../public/me.jpeg";
 import Typed from "react-typed";
 
 export default function Hero() {
@@ -29,16 +29,24 @@ export default function Hero() {
           optimal solutions for both users and code maintainers.
         </p>
 
-        <button className="p-6 w-44 bg-gray-three text-clean-white font-poppins font-medium border-gray-three border-2 shadow-md hover:underline hover:bg-clean-white hover:text-gray-three ease-in-out duration-500">
-          <span>DOWNLOAD CV</span>
-        </button>
+        <div className="flex 2xl:justify-start 2xl:gap-8 md:justify-between">
+          <button className="p-6 w-44 bg-gray-three text-clean-white font-poppins font-medium border-gray-three border-2 shadow-sm hover:underline hover:bg-clean-white hover:shadow-md hover:text-gray-three ease-in-out duration-500">
+            <span>Download CV</span>
+          </button>
+          <button
+            type="submit"
+            className="p-6 w-44 bg-gray-three text-clean-white font-poppins font-medium border-gray-three border-2 shadow-sm hover:underline hover:bg-clean-white hover:shadow-md hover:text-gray-three ease-in-out duration-500"
+          >
+            LinkedIn
+          </button>
+        </div>
       </div>
 
       <div className="h-full items-center justify-center hidden md:flex">
         <div className="h-96 w-60">
           <Image
-            src={home}
-            alt="home"
+            src={me}
+            alt="me"
             className="object-cover h-full w-full"
             priority
           />

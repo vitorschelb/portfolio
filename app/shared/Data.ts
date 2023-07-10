@@ -50,4 +50,12 @@ export const icons = [
   { id: "TbFramer", title: "Framer Motion" },
 ];
 
+export const navList = [
+  { label: "HOME", href: "/" },
+  { label: "ABOUT", href: "/about" },
+  { label: "TECH STACK", href: "/techstack" },
+  { label: "PROJECTS", href: "/projects" },
+  { label: "CONTACT", href: "/contact" },
+];
+
 export default projectsData;

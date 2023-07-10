@@ -34,7 +34,6 @@ export default function ContactForm() {
     setLoading(false);
 
     if (response.ok) {
-      console.log("Message sent");
       setState(initState);
       toast({
         status: "success",
@@ -61,76 +60,59 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="bg-white dark:bg-gray-900">
-      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
-          Contact Us
-        </h2>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <div>
-              <label
-                htmlFor="name"
-                id="name"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >
-                Name
-              </label>
-              <input
-                name="name"
-                type="text"
-                id="name"
-                className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                placeholder="Your Name"
-                required
-                value={state.name}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="sm:col-span-2">
-              <label
-                htmlFor="email"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >
-                Your email
-              </label>
-              <input
-                name="email"
-                type="email"
-                id="email"
-                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                placeholder="name@flowbite.com"
-                required
-                value={state.email}
-                onChange={handleChange}
-              />
-            </div>
-
-            <label
-              htmlFor="message"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
-            >
-              Your message
-            </label>
-            <textarea
-              name="message"
-              id="message"
-              rows={6}
-              className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-              placeholder="Leave a comment..."
-              value={state.message}
-              onChange={handleChange}
-            ></textarea>
+    <section className="flex flex-col justify-center items-center h-screen bg-clean-white md:px-20 2xl:px-36">
+        <div className="w-1/2">
+          <div className="flex items-center justify-around mb-6">
+            <h1 className="tracking-super text-xl font-poppins font-bold text-gray-three">
+              GET IN TOUCH
+            </h1>
+            <span className="w-1/2 border-gray-zero border-b" />
           </div>
-          <button
-            type="submit"
-            disabled={loading}
-            className="py-3 disabled:bg-gray-400 disabled:text-gray-100 px-5 text-sm font-medium text-center text-white rounded-lg bg-gray-700 sm:w-fit hover:bg-black focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-slate-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-          >
-            Send message
-          </button>
-        </form>
-      </div>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <div>
+                <input
+                  name="name"
+                  type="text"
+                  id="name"
+                  className="p-3 mb-3 w-full text-sm font-poppins tracking-wider bg-gray-50 border border-gray-300 shadow-sm focus:border-gray-400 focus:shadow-md ease-in-out transition duration-300 focus:outline-none"
+                  placeholder="Name"
+                  required
+                  value={state.name}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="sm:col-span-2">
+                <input
+                  name="email"
+                  type="email"
+                  id="email"
+                  className="p-3 mb-3 w-full text-sm font-poppins tracking-wider bg-gray-50 border border-gray-300 shadow-sm focus:border-gray-400 focus:shadow-md ease-in-out transition duration-300 focus:outline-none"
+                  placeholder="Email"
+                  required
+                  value={state.email}
+                  onChange={handleChange}
+                />
+              </div>
+              <textarea
+                name="message"
+                id="message"
+                rows={6}
+                className="resize-none p-3 mb-3 w-full text-sm font-poppins tracking-wider bg-gray-50 border border-gray-300 shadow-sm focus:border-gray-400 focus:shadow-md ease-in-out transition duration-300 focus:outline-none"
+                placeholder="Message"
+                value={state.message}
+                onChange={handleChange}
+              ></textarea>
+              <button
+                type="submit"
+                disabled={loading}
+                className="p-6 w-44 bg-gray-three text-clean-white font-poppins font-medium border-gray-three border-2 shadow-sm hover:underline hover:bg-clean-white hover:shadow-md hover:text-gray-three ease-in-out duration-500"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
     </section>
   );
 }

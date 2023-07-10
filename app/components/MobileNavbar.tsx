@@ -1,6 +1,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import Image from "next/image";
+import me from "../../public/me.jpeg";
+import { SiGithub, SiLinkedin } from "react-icons/si";
+import { navList } from "../shared/Data";
 
 export default function MobileNavbar() {
   const [openMenu, setMenuOpen] = useState(false);
@@ -12,7 +16,7 @@ export default function MobileNavbar() {
     <nav className="lg:hidden">
       <div className="px-5 py-5 absolute">
         <AiOutlineMenu
-          className="text-2xl cursor-pointer"
+          className="text-2xl text-gray-three cursor-pointer"
           onClick={handleMenu}
         />
       </div>
@@ -32,33 +36,33 @@ export default function MobileNavbar() {
             className="text-2xl text-clean-white mb-4"
           />
         </div>
-        <ul className="flex flex-col items-center justify-center h-full text-clean-white ">
-          <li className="p-3 w-full text-center border-gray-two border-b" >
-            <Link onClick={handleMenu} href="/">HOME</Link>
-          </li>
-
-          <li className="p-3 w-full text-center border-gray-two border-b">
-            <Link onClick={handleMenu} href="/about">ABOUT</Link>
-          </li>
-
-          <li className="p-3 w-full text-center border-gray-two border-b">
-            <Link onClick={handleMenu} className="px-5 py-4" href="/techstack">
-              TECH STACK
+        <div className="h-50 w-25">
+          <Image
+            src={me}
+            alt="me"
+            className="object-cover h-full w-full"
+            priority
+          />
+        </div>
+        <div className="flex flex-col items-center justify-evenly h-full text-clean-white ">
+          <ul className="w-full">
+            {navList.map((navItem, i) => (
+              <Link key={i} onClick={handleMenu} href={navItem.href}>
+                <li className="p-3 w-full text-center border-gray-two border-b">
+                  {navItem.label}
+                </li>
+              </Link>
+            ))}
+          </ul>
+          <div className="flex justify-center items-center text-2xl gap-4 text-clean-white">
+            <Link href="/">
+              <SiGithub />
             </Link>
-          </li>
-
-          <li className="p-3 w-full text-center border-gray-two border-b">
-            <Link onClick={handleMenu} className="px-5 py-4" href="/projects">
-              PROJECTS
+            <Link href="/">
+              <SiLinkedin />
             </Link>
-          </li>
-
-          <li className="p-3 w-full text-center">
-            <Link onClick={handleMenu} className="px-5 py-4" href="/contact">
-              CONTACT
-            </Link>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </nav>
   );
