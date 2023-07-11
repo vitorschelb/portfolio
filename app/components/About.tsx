@@ -4,7 +4,7 @@ import { aboutList } from "../shared/Data";
 
 export default function About() {
   return (
-    <section className="grid md:grid-cols-2 grid-cols-1 gap-10 px-8 md:px-20 2xl:px-36 h-screen bg-clean-white">
+    <section className="grid lg:grid-cols-2 grid-cols-1 gap-10 px-8 md:px-20 2xl:px-36 h-screen bg-clean-white">
       <div className="flex flex-col justify-center">
         <div className="flex items-center justify-around mb-6">
           <h1 className="text-xl mr-10 font-bold font-poppins tracking-super text-gray-three">
@@ -21,7 +21,7 @@ export default function About() {
         </ul>
       </div>
 
-      <div className="hidden md:flex items-center justify-center">
+      <div className="hidden lg:flex items-center justify-center">
         <div className="h-96 2xl:h-3/6 w-60 2xl:w-6/12">
           <Image
             src={me}
