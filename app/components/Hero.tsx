@@ -7,7 +7,7 @@ import Button from "./Button";
 export default function Hero() {
   return (
     <section className="grid h-screen grid-cols-1 px-8 bg-clean-white md:grid-cols-2 md:px-20 md:gap-10 2xl:px-36">
-      <div className="flex flex-col justify-center gap-8">
+      <div className="flex flex-col justify-center gap-8 mt-10 ">
         <h1 className="tracking-widest">Hello there, my name is</h1>
         <h2 className="font-bold text-5xl font-poppins text-gray-three">
           VITOR SCHELB
@@ -30,7 +30,7 @@ export default function Hero() {
           optimal solutions for both users and code maintainers.
         </p>
 
-        <div className="flex flex-col items-center gap-3 md:flex-row md:items-start md:gap-8 2xl:justify-start">
+        <div className="flex flex-col items-center gap-3 lg:flex-row lg:items-start lg:gap-8 2xl:justify-start">
           <Button href={"/"}>Download CV</Button>
           <Button href="https://www.linkedin.com/in/vitor-schelb-37b109124/?originalSubdomain=br">
             LinkedIn
