@@ -62,11 +62,11 @@ export default function ContactForm() {
   return (
     <section className="flex flex-col justify-center items-center h-screen bg-clean-white md:px-20 2xl:px-36">
       <div className="w-1/2">
-        <div className="flex items-center justify-around mb-6">
+        <div className="flex items-center mb-6">
           <h1 className="tracking-super text-xl font-poppins font-bold text-gray-three">
             GET IN TOUCH
           </h1>
-          <span className="w-1/2 border-gray-zero border-b" />
+          <span className="w-full border-gray-zero border-b" />
         </div>
         <form onSubmit={handleSubmit}>
           <div>
