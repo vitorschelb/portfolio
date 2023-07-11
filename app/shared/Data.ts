@@ -67,7 +67,7 @@ export const iconList: Icon[] = [
 export const navList: NavItem[] = [
   { label: "HOME", href: "/" },
   { label: "ABOUT", href: "/about" },
-  { label: "TECH STACK", href: "/techstack" },
+  { label: "BLOG", href: "/blog" },
   { label: "PROJECTS", href: "/projects" },
   { label: "CONTACT", href: "/contact" },
 ];

@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar";
 import { Metadata } from "next";
 import { PropsWithChildren } from "react";
 import PreLoader from "./components/PreLoader";
-import SideIcons from "./components/SideIcons";
+
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 

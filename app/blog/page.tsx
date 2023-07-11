@@ -1,11 +1,11 @@
 import { PageTransition } from "../components/PageTransition";
-import TechStack from "../components/TechStack";
+import Blog from "../components/Blog";
 
-export default function TechStackFunction() {
+export default function BlogFunction() {
   return (
     <main>
       <PageTransition>
-      <TechStack />
+      <Blog />
       </PageTransition>
     </main>
   );
