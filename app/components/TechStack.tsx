@@ -1,5 +1,5 @@
 "use client";
-import { icons } from "../shared/Data";
+import { iconList } from "../shared/Data";
 import {
   SiReact,
   SiRedux,
@@ -41,15 +41,15 @@ export default function TechStack() {
           <span className="w-1/2 border-b border-gray-zero" />
         </div>
         <div className="flex flex-wrap justify-start mb-6">
-          {iconElements.map((item) => {
-            const iconName = item.props.name;
-            const iconTitle = icons.find((icon) => icon.id === iconName)?.title;
+          {iconElements.map((iconElement) => {
+            const iconName = iconElement.props.name;
+            const iconTitle = iconList.find((iconItem) => iconItem.id === iconName)?.title;
             return (
               <div
                 key={iconName}
                 className="flex my-3 w-1/2 md:w-1/3 xl:w-1/4 flex-col justify-center items-center hover:animate-float"
               >
-                <div className="text-4xl opacity-90">{item}</div>
+                <div className="text-4xl opacity-90">{iconElement}</div>
                 <p className="font-firacode text-xs mt-1">{iconTitle}</p>
               </div>
             );

@@ -4,12 +4,11 @@ import { PropsWithChildren } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function PreLoader({ children }: PropsWithChildren) {
-
   return (
     <AnimatePresence>
       <div className="w-screen h-screen bg-gray-three">
         <div className="flex justify-center items-center h-full w-full absolute">
-          <div className="w-0 h-full border-r absolute animate-grow border-gray-three"/>
+          <div className="w-0 h-full border-r absolute animate-grow border-gray-three" />
         </div>
         <motion.div
           key={1}

@@ -8,7 +8,6 @@ type ProjectProp = {
   project: Project;
 };
 
-//Organizar
 export default function ProjectCard({project}: ProjectProp) {
   return (
     <div className="flex flex-col h-full w-full md:max-w-[300px] p-4 bg-gray-three bg-opacity-20 justify-between shadow-md">
