@@ -26,8 +26,8 @@ export default function MobileNavbar() {
       <div
         className={
           openMenu
-            ? "absolute flex flex-col justify-center w-64 h-screen bg-gray-three transition-transform duration-500 transform translate-x-0"
-            : "absolute flex flex-col justify-center w-64 h-screen bg-gray-three transition-transform duration-500 transform -translate-x-full"
+            ? "absolute flex flex-col justify-center w-64 h-screen bg-gray-three transition-transform duration-500 transform translate-x-0 z-10"
+            : "absolute flex flex-col justify-center w-64 h-screen bg-gray-three transition-transform duration-500 transform -translate-x-full z-10"
         }
       >
         <div className="absolute flex justify-end w-full top-6 right-6">
@@ -55,10 +55,10 @@ export default function MobileNavbar() {
             ))}
           </ul>
           <div className="flex justify-center items-center text-2xl gap-4 text-clean-white">
-            <Link href="/">
+            <Link href="https://github.com/vitorschelb">
               <SiGithub />
             </Link>
-            <Link href="/">
+            <Link href="https://www.linkedin.com/in/vitor-schelb-37b109124/?originalSubdomain=br">
               <SiLinkedin />
             </Link>
           </div>

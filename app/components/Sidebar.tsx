@@ -23,11 +23,11 @@ export default function Sidebar() {
           ))}
         </ul>
         <div className="mt-10 flex gap-4 text-clean-white text-2xl">
-          <Link href="/">
+          <Link href="https://github.com/vitorschelb">
             <SiGithub className="hover:text-gray-two ease-in-out duration-500" />
           </Link>
 
-          <Link href="/">
+          <Link href="https://www.linkedin.com/in/vitor-schelb-37b109124/?originalSubdomain=br">
             <SiLinkedin className="hover:text-gray-two ease-in-out duration-500" />
           </Link>
         </div>

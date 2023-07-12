@@ -70,7 +70,7 @@ export default function About() {
                   key={iconName}
                   className="w-24 my-2 flex flex-col justify-center items-center hover:animate-float sm:w-2/12 2xl:w-1/4"
                 >
-                  <div className="text-2xl opacity-90 2xl:text-4xl">
+                  <div className="text-2xl z-0 opacity-90 2xl:text-4xl">
                     {iconElement}
                   </div>
                   <p className="mt-1 text-xs font-firacode">{iconTitle}</p>

@@ -1,5 +1,6 @@
 import one from "../../public/one.jpg";
 import three from "../../public/three.jpg";
+import portfolio from "../../public/portfolio.png";
 import { StaticImageData } from "next/image";
 
 export type Project = {
@@ -27,6 +28,16 @@ type AboutItem = {
 };
 
 export const projectsData: Project[] = [
+  {
+    id: "My Portfolio",
+    image: portfolio,
+    repoURL: "/",
+    deployURL: "/",
+    title: "Portfolio",
+    description:
+      "Transforme trechos de livros em experiências imersivas. Narração, som e animações trazem cada página à vida. Descubra a magia da leitura.",
+    technologies: "Next TypeScript Tailwind Framer-Motion",
+  },
   {
     id: "literary-ambience",
     image: one,

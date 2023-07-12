@@ -57,13 +57,7 @@ export default function ProjectsCarousel() {
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
-
-  // Fazer marcação de avanço
-
-  const goToSlide = (slideIndex: number) => {
-    setCurrentIndex(slideIndex);
-  };
-
+  
   return (
     <div className="flex flex-col">
       <AnimatePresence initial={false} mode="wait">
@@ -86,7 +80,11 @@ export default function ProjectsCarousel() {
           </div>
 
           <div className="flex">
-            <ProjectCard project={projectsData[currentIndex]} />
+            <ProjectCard
+              project={projectsData[currentIndex]}
+              currentIndex={currentIndex}
+              totalSlides={slides.length}
+            />
           </div>
         </motion.div>
       </AnimatePresence>
@@ -105,6 +103,33 @@ export default function ProjectsCarousel() {
           Next
         </button>
       </div>
+
+      <div className="flex justify-center items-baseline mt-4 space-x-2 overflow-x-auto">
+        {slides.map((_, idx) => (
+          <ProjectIndex index={idx} key={idx} currentIndex={currentIndex} />
+        ))}
+      </div>
     </div>
   );
 }
+
+function ProjectIndex({ index = 0, currentIndex = 0 }) {
+  let filter = index === currentIndex ? "none" : "grayscale(100%)";
+  let scale = index === currentIndex ? "w-12 h-12" : "w-10 h-10";
+
+  const slides = projectsData.map((project) => project.image);
+
+  return (
+    <div className="transition-all duration-500 transform-gpu">
+      <Image
+        src={slides[index]}
+        alt={`slide-${index}`}
+        width={100}
+        height={100}
+        className={`${filter} ${scale}`}
+      />
+    </div>
+  );
+}
+
+//Propriedade com ordem no flex.
