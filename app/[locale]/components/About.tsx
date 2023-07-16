@@ -1,7 +1,6 @@
 import Image from "next/image";
-import me from "../../public/me.jpeg";
-import { aboutList } from "../shared/Data";
-import { iconList } from "../shared/Data";
+import { AboutItem } from "../../shared/Data";
+import { iconList } from "../../shared/Data";
 import {
   SiReact,
   SiRedux,
@@ -16,6 +15,7 @@ import {
   SiPrisma,
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
+import { useTranslations } from "next-intl";
 
 const iconElements = [
   <SiReact key={1} name="SiReact" />,
@@ -33,6 +33,15 @@ const iconElements = [
 ];
 
 export default function About() {
+  const t = useTranslations("About");
+
+  const aboutList: AboutItem[] = [
+    { text: t("about_first_text") },
+    { text: t("about_second_text") },
+    { text: t("about_third_text") },
+    { text: t("about_fourth_text") },
+  ];
+
   return (
     <section className="h-screen bg-clean-white overflow-auto no-scrollbar grid grid-cols-1 px-8 gap-10 md:px-20 md:grid-cols-3 lg:grid-cols-3 2xl:px-36 2xl:grid-cols-2">
       <div className="col-span-2 mt-24 flex flex-col gap-6 lg:justify-center 2xl:col-span-1">
@@ -84,10 +93,12 @@ export default function About() {
       <div className="hidden lg:flex justify-center items-center">
         <div className="h-96 w-60 2xl:h-3/6 2xl:w-6/12">
           <Image
-            src={me}
+            src="/me.jpeg"
             alt="Photo of a 30-year-old man's face"
             className="h-full w-full object-cover shadow-sm"
             priority
+            width={500}
+            height={300}
           />
         </div>
       </div>
