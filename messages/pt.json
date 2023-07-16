@@ -1,0 +1,36 @@
+{
+  "Hero": {
+    "description": "Apaixonado por transformar ideias em realidade, melhorando constantemente minhas habilidades técnicas e a capacidade de conectar diferentes áreas para criar soluções ótimas tanto para os usuários quanto para os mantenedores do código."
+  },
+  "Blog": {
+    "alert": "Em breve!"
+  },
+  "Sidebar": {
+    "navList_home_label": "HOME",
+    "navList_about_label": "SOBRE",
+    "navList_blog_label": "BLOG",
+    "navList_projects_label": "PROJETOS",
+    "navList_contact_label": "CONTATO"
+  },
+  "About": {
+    "about_first_text": "Atualmente, trabalho na equipe de desenvolvimento e mentoria de projetos na PodCodar.",
+    "about_second_text": "Percebo a programação como uma ferramenta poderosa para a transformação social. Meu objetivo é desenvolver soluções inovadoras, otimizar processos e construir tecnologias que possam gerar impactos positivos em várias áreas da vida.",
+    "about_third_text": "Mestre em Teoria da História e Humanidades Digitais, focado nos impactos das transformações tecnológicas nas práticas de lembrar e esquecer entre os usuários em redes de mídia social.",
+    "about_fourth_text": "Com sete anos de experiência em sala de aula como educador, gerenciei e supervisionei efetivamente equipes de estágio e projetos de extensão."
+  },
+  "ProjectsCard": {
+    "my-portfolio": {
+      "title": "PJAJ",
+      "description": "TESTE."
+    },
+    "literary-ambience": {
+      "title": "BELEZA",
+      "description": "TALAOAOAO"
+    },
+    "tour-companion": {
+      "title": "TUTU",
+      "description": "BABY."
+    }
+  }
+}
+

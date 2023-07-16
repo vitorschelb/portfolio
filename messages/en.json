@@ -1,0 +1,35 @@
+{
+  "Hero": {
+    "description": "Passionate about turning ideas into reality, constantly improving my technical skills and ability to connect different areas to create optimal solutions for both users and code maintainers."
+  },
+  "Blog": {
+    "alert": "Coming soon!"
+  },
+  "Sidebar": {
+    "navList_home_label": "HOME",
+    "navList_about_label": "ABOUT",
+    "navList_blog_label": "BLOG",
+    "navList_projects_label": "PROJECTS",
+    "navList_contact_label": "CONTACT"
+  },
+  "About": {
+    "about_first_text": "Currently, I work in the development and project mentoring team at PodCodar.",
+    "about_second_text": "I perceive programming as a powerful tool for social transformation. My objective is to develop innovative solutions, streamline processes, and build technologies that can yield positive impacts in various areas of life.",
+    "about_third_text": "Master's degree in Theory of History and Digital Humanities, focusing on the impacts of technological transformations on the practices of remembering and forgetting among users in social media networks.",
+    "about_fourth_text": "Seven years of classroom experience as an educator, I have effectively managed and supervised internship teams and extension projects."
+  },
+  "ProjectsCard": {
+    "my-portfolio": {
+      "title": "Portfolio",
+      "description": "This website was built using ReactJS, Material UI, and React Router. It is hosted on Netlify and the source code is available on GitHub."
+    },
+    "literary-ambience": {
+      "title": "BookAura",
+      "description": "Transform book snippets into immersive experiences. Narration, sound, and animations bring each page to life. Discover the magic of reading."
+    },
+    "tour-companion": {
+      "title": "TourBuddy",
+      "description": "Discover rated tours and guides on an intuitive platform. Explore the world with confidence alongside the best local guides."
+    }
+  }
+}

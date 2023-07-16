@@ -3,7 +3,7 @@
 import Image from "next/image";
 import ProjectCard from "./ProjectCard";
 import { useState } from "react";
-import projectsData from "../shared/Data";
+import projectsData from "../../shared/Data";
 import { AnimatePresence, motion } from "framer-motion";
 
 const variants = {

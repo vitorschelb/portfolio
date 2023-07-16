@@ -1,11 +1,22 @@
 "use client";
 
-import Link from "next/link";
 import MobileNavbar from "./MobileNavbar";
-import { navList } from "../shared/Data";
 import { SiGithub, SiLinkedin } from "react-icons/si";
+import { useTranslations } from "next-intl";
+import { NavItem } from "../../shared/Data";
+import Link from "next-intl/link";
 
 export default function Sidebar() {
+  const t = useTranslations("Sidebar");
+
+  const navList: NavItem[] = [
+    { label: t("navList_home_label"), href: "/" },
+    { label: t("navList_about_label"), href: "/about" },
+    { label: t("navList_blog_label"), href: "/blog" },
+    { label: t("navList_projects_label"), href: "/projects" },
+    { label: t("navList_contact_label"), href: "/contact" },
+  ];
+
   return (
     <nav>
       {/* Desktop Menu */}
@@ -29,6 +40,13 @@ export default function Sidebar() {
 
           <Link href="https://www.linkedin.com/in/vitor-schelb-37b109124/?originalSubdomain=br">
             <SiLinkedin className="hover:text-gray-two ease-in-out duration-500" />
+          </Link>
+
+          <Link href="/" locale="en">
+            <p>ENG</p>
+          </Link>
+          <Link href="/" locale="pt">
+            <p>PT</p>
           </Link>
         </div>
       </div>

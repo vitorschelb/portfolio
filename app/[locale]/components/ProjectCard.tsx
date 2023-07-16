@@ -1,7 +1,8 @@
 import { SiGithub } from "react-icons/si";
 import { FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
-import { Project } from "../shared/Data";
+import { Project } from "../../shared/Data";
+import { useTranslations } from "next-intl";
 
 type ProjectProp = {
   project: Project;
@@ -14,18 +15,21 @@ export default function ProjectCard({
   currentIndex,
   totalSlides,
 }: ProjectProp) {
+
+  const t = useTranslations('ProjectsCard'); 
+
   return (
     <div className="flex flex-col h-full w-full md:max-w-[300px] p-4 bg-gray-three bg-opacity-20 justify-between shadow-md">
       <div className="flex items-center mb-6">
         <h1 className="font-bold tracking-widest text-lg font-poppins">
-          {project.title}
+        {t(`${project.id}.title` as any)}
         </h1>
         <span className="w-full border-gray-zero ml-4 border-b" />
       </div>
 
       <div className="bg-gray-three bg-opacity-30 p-4 shadow-sm">
         <p className="text-justify font-medium text-sm">
-          {project.description}
+        {t(`${project.id}.description` as any)}
         </p>
       </div>
 

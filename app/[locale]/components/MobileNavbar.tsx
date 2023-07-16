@@ -2,9 +2,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Image from "next/image";
-import me from "../../public/me.jpeg";
 import { SiGithub, SiLinkedin } from "react-icons/si";
-import { navList } from "../shared/Data";
+import { navList } from "../../shared/Data";
 
 export default function MobileNavbar() {
   const [openMenu, setMenuOpen] = useState(false);
@@ -38,10 +37,12 @@ export default function MobileNavbar() {
         </div>
         <div className="h-50 w-25">
           <Image
-            src={me}
+            src="/me.jpeg"
             alt="me"
             className="object-cover h-full w-full"
             priority
+            width={500}
+            height={300} 
           />
         </div>
         <div className="flex flex-col items-center justify-evenly h-full text-clean-white ">

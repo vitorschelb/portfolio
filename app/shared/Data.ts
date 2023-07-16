@@ -18,18 +18,20 @@ type Icon = {
   title: string;
 };
 
-type NavItem = {
+export type NavItem = {
   label: string;
   href: string;
 };
 
-type AboutItem = {
+export type AboutItem = {
   text: string;
 };
 
+//Ver como passar a tradução aqui dentro do DATA
+
 export const projectsData: Project[] = [
   {
-    id: "My Portfolio",
+    id: "my-portfolio",
     image: portfolio,
     repoURL: "/",
     deployURL: "/",
