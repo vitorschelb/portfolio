@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import { AboutItem } from "../../shared/Data";
 import { iconList } from "../../shared/Data";

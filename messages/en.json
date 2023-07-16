@@ -21,15 +21,11 @@
   "ProjectsCard": {
     "my-portfolio": {
       "title": "Portfolio",
-      "description": "This website was built using ReactJS, Material UI, and React Router. It is hosted on Netlify and the source code is available on GitHub."
+      "description": "Personal portfolio with original desing. [Under development]"
     },
-    "literary-ambience": {
-      "title": "BookAura",
-      "description": "Transform book snippets into immersive experiences. Narration, sound, and animations bring each page to life. Discover the magic of reading."
-    },
-    "tour-companion": {
-      "title": "TourBuddy",
-      "description": "Discover rated tours and guides on an intuitive platform. Explore the world with confidence alongside the best local guides."
+    "podcodar-app": {
+      "title": "PodCodar App",
+      "description": "PodCodar is a platform that connects the community. The application's MVP includes registration and onboarding process for new members, along with the creation of personalized profiles. [Under development] "
     }
   }
 }

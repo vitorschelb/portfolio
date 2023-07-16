@@ -1,15 +1,12 @@
-import one from "../../public/one.jpg";
-import three from "../../public/three.jpg";
-import portfolio from "../../public/portfolio.png";
 import { StaticImageData } from "next/image";
+import podcodar from "../../public/podcodar.jpeg";
+import portfolio from "../../public/portfolio.png";
 
 export type Project = {
   id: string;
   image: StaticImageData;
   repoURL: string;
   deployURL: string;
-  title: string;
-  description: string;
   technologies: string;
 };
 
@@ -27,7 +24,7 @@ export type AboutItem = {
   text: string;
 };
 
-//Ver como passar a tradução aqui dentro do DATA
+//TODO: Use only messages to store data.
 
 export const projectsData: Project[] = [
   {
@@ -35,30 +32,16 @@ export const projectsData: Project[] = [
     image: portfolio,
     repoURL: "/",
     deployURL: "/",
-    title: "Portfolio",
-    description:
-      "Transforme trechos de livros em experiências imersivas. Narração, som e animações trazem cada página à vida. Descubra a magia da leitura.",
-    technologies: "Next TypeScript Tailwind Framer-Motion",
+    technologies:
+      "Next TypeScript Tailwind Framer-Motion ChakraUI Next-intl Nodemailer",
   },
   {
-    id: "literary-ambience",
-    image: one,
+    id: "podcodar-app",
+    image: podcodar,
     repoURL: "https://github.com/nicolasbrandao/fake-store",
     deployURL: "/",
-    title: "BookAura",
-    description:
-      "Transforme trechos de livros em experiências imersivas. Narração, som e animações trazem cada página à vida. Descubra a magia da leitura.",
-    technologies: "Next TypeScript Tailwind Framer-Motion",
-  },
-  {
-    id: "tour-companion",
-    image: three,
-    repoURL: "https://github.com/nicolasbrandao/fake-store",
-    deployURL: "/",
-    title: "TourBuddy",
-    description:
-      "Descubra passeios e guias avaliados em uma plataforma intuitiva. Explore o mundo com confiança ao lado dos melhores guias locais.",
-    technologies: "Next TypeScript Tailwind Prisma",
+    technologies:
+      "Next TypeScript NextAuth Prisma Docker Tailwind-Styled-Components Zod",
   },
 ];
 

@@ -20,17 +20,12 @@
   },
   "ProjectsCard": {
     "my-portfolio": {
-      "title": "PJAJ",
-      "description": "TESTE."
+      "title": "Portifólio",
+      "description": "Portifólio pessoal com design original. [Em desenvolvimento]."
     },
-    "literary-ambience": {
-      "title": "BELEZA",
-      "description": "TALAOAOAO"
-    },
-    "tour-companion": {
-      "title": "TUTU",
-      "description": "BABY."
+    "podcodar-app": {
+      "title": "PodCodar App",
+      "description": "PodCodar é uma plataforma que conecta a comunidade. O MVP da aplicação inclui o processo de registro e integração de novos membros, juntamente com a criação de perfis personalizados. [Em desenvolvimento]"
     }
   }
 }
-
