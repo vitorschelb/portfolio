@@ -1,17 +1,23 @@
-import { useLocale } from "next-intl";
-import { NextIntlClientProvider } from "next-intl";
 import "../globals.css";
+
 import { Open_Sans } from "next/font/google";
-import Sidebar from "./components/Sidebar";
 import { Metadata } from "next";
-import PreLoader from "./components/PreLoader";
 import { notFound } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
+
+import PreLoader from "./components/PreLoader";
+import Sidebar from "./components/Sidebar";
+import ToggleLanguage from "./components/ToggleLanguage";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Vitor Schelb Portfolio",
   description: "This is my personal website.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  }
 };
 
 type Props = {
@@ -23,7 +29,10 @@ export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "pt" }];
 }
 
-export default async function LocaleLayout({ children, params: { locale } }) {
+export default async function LocaleLayout({
+  children,
+  params: { locale },
+}: Props) {
   let messages;
   try {
     messages = (await import(`../../messages/${locale}.json`)).default;
@@ -38,6 +47,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
           <PreLoader>
             <div className="h-screen flex flex-row justify-start overflow-hidden">
               <Sidebar />
+              <ToggleLanguage locale={locale}/>
               <div className="flex-1">{children}</div>
             </div>
           </PreLoader>
