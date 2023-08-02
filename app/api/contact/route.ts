@@ -1,21 +1,20 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-
-type FeedBack = {
-  name: string;
-  email: string;
-  message: string;
-};
+import { feedbackSchema } from "@/app/shared/Data";
 
 export async function POST(request: Request) {
-  const body: FeedBack = await request.json();
+  const body = await request.json();
+
+  const feedback = feedbackSchema.parse(body);
 
   // Basic server side validation
-  if (!body.name || !body.email || !body.message) {
-    return NextResponse.json({ message: "Invalid request body" });
-  }
 
-  const { name, email, message } = body;
+  // CSRF Token
+  // Rate Limiting
+  // Serialização(.stringfy) e Desserelização(.parse) de dados // Marshal e Unmarshal
+  //Update later with STARTTLS. Study about safe.
+
+  const { name, email, message } = feedback;
 
   const user = process.env.EMAIL;
   const pass = process.env.EMAIL_PASS;
@@ -23,7 +22,7 @@ export async function POST(request: Request) {
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
-    secure: true, //Update later with STARTTLS. Study about safe.
+    secure: true,
     auth: {
       user,
       pass,

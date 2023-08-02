@@ -10,9 +10,9 @@ type InputChangeEvent = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [state, setState] = useState(initState);
-
+ 
   const t = useTranslations("Contact");
-
+  
   const toast = useToast();
 
   const handleChange = ({ target }: InputChangeEvent) => {
@@ -48,6 +48,7 @@ export default function ContactForm() {
           </Box>
         ),
       });
+
     } else {
       toast({
         status: "success",

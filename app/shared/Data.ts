@@ -1,6 +1,16 @@
 import { StaticImageData } from "next/image";
 import podcodar from "../../public/podcodar.jpeg";
 import portfolio from "../../public/portfolio.png";
+import { z } from "zod";
+
+export const feedbackSchema = z.object({
+  name: z
+    .string()
+    .nonempty("* Obrigatory field")
+    .min(3, "* 2 characters minimum"),
+  email: z.string().nonempty("* Obrigatory field").email("* Invalid email"),
+  message: z.string().nonempty("* Obrigatory field"),
+});
 
 export type Project = {
   id: string;
