@@ -20,12 +20,22 @@
   },
   "ProjectsCard": {
     "my-portfolio": {
-      "title": "Portifólio",
-      "description": "Portifólio pessoal com design original. [Em desenvolvimento]."
+      "title": "Portfólio",
+      "description": "Portfólio pessoal com design autoral."
     },
     "podcodar-app": {
-      "title": "PodCodar App",
-      "description": "PodCodar é uma plataforma que conecta a comunidade. O MVP da aplicação inclui o processo de registro e integração de novos membros, juntamente com a criação de perfis personalizados. [Em desenvolvimento]"
-    }
+      "title": "PodCodarApp",
+      "description": "PodCodar é uma plataforma que conecta a comunidade. [Em desenvolvimento] o social. Meu objetivo é desenvolver soluções inovadoras, otimizar processos e construir tecnologias que possam gerar impactos positivos em várias áreas da vida.",
+      "about_third_text": "Mestre em Teoria da História e Humanidades Digitais, focado nos impactos das transformações tecnológicas nas práticas de lembrar e esquecer entre os usuários em redes de mídia social.",
+      "about_fourth_text": "Com sete anos de experiência em sala de aula como educador, gerenciei e supervisionei efetivamente equipes de estágio e projetos de extensã"
+    } 
+  },
+  "Contact": {
+    "title": "ENTRE EM CONTATO",
+    "button": "ENVIAR",
+    "name": "Nome",
+    "message": "Mensagem",
+    "toast": "Mensagem enviada com sucesso!",
+    "error": "Erro ao enviar mensagem!"
   }
 }
