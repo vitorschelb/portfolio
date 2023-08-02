@@ -27,6 +27,8 @@ export default function Sidebar() {
             <Link
               key={i}
               href={navItem.href}
+              tabIndex={0}
+              aria-label={navItem.label}
               className="p-3 w-full border-b border-gray-two hover:text-gray-three hover:bg-white ease-in-out duration-500"
             >
               <li>{navItem.label}</li>
@@ -34,24 +36,22 @@ export default function Sidebar() {
           ))}
         </ul>
         <div className="mt-10 flex gap-4 text-clean-white text-2xl">
-          <Link href="https://github.com/vitorschelb">
+          <Link
+            tabIndex={0}
+            aria-label="Github"
+            href="https://github.com/vitorschelb"
+          >
             <SiGithub className="hover:text-gray-two ease-in-out duration-500" />
           </Link>
-
-          <Link href="https://www.linkedin.com/in/vitor-schelb-37b109124/?originalSubdomain=br">
+          <Link
+            tabIndex={0}
+            aria-label="LinkedIn"
+            href="https://www.linkedin.com/in/vitor-schelb-37b109124/?originalSubdomain=br"
+          >
             <SiLinkedin className="hover:text-gray-two ease-in-out duration-500" />
-          </Link>
-
-          <Link href="/" locale="en">
-            <p>ENG</p>
-          </Link>
-          <Link href="/" locale="pt">
-            <p>PT</p>
           </Link>
         </div>
       </div>
-
-      {/* Mobile Menu */}
 
       <MobileNavbar />
     </nav>

@@ -44,7 +44,7 @@ export default function About() {
   ];
 
   return (
-    <section className="h-screen bg-clean-white overflow-auto no-scrollbar grid grid-cols-1 px-8 gap-10 md:px-20 md:grid-cols-3 lg:grid-cols-3 2xl:px-36 2xl:grid-cols-2">
+    <section className="h-screen bg-clean-white overflow-auto no-scrollbar grid grid-cols-1 px-8 gap-10 md:px-20 lg:grid-cols-3 2xl:px-36 2xl:grid-cols-2">
       <div className="col-span-2 mt-24 flex flex-col gap-6 lg:justify-center 2xl:col-span-1">
         <div className="flex justify-around items-center">
           <h1 className="text-xl font-bold tracking-super mr-10 font-poppins text-gray-three">
@@ -78,7 +78,7 @@ export default function About() {
               return (
                 <div
                   key={iconName}
-                  className="w-24 my-2 flex flex-col justify-center items-center hover:animate-float sm:w-2/12 2xl:w-1/4"
+                  className="w-24 my-2 flex flex-col justify-center items-center sm:w-2/12 2xl:w-1/4"
                 >
                   <div className="text-2xl z-0 opacity-90 2xl:text-4xl">
                     {iconElement}

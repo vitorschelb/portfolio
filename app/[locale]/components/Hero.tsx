@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl";
 
 export default function Hero() {
   const t = useTranslations("Hero");
+  
   return (
     <section className="grid h-screen grid-cols-1 px-8 bg-clean-white md:grid-cols-2 md:px-20 md:gap-10 2xl:px-36">
       <div className="flex flex-col justify-center gap-8 mt-10 ">
@@ -30,8 +31,8 @@ export default function Hero() {
         <p className="text-justify text-gray-zero">{t("description")}</p>
 
         <div className="flex flex-col items-center gap-3 lg:flex-row lg:items-start lg:gap-8 2xl:justify-start">
-          <Button href={"/"}>Download CV</Button>
-          <Button href="https://www.linkedin.com/in/vitor-schelb-37b109124/?originalSubdomain=br">
+          <Button aria-label="Download CV" href={"/"}>Download CV</Button>
+          <Button aria-label="LinkedIn" href="https://www.linkedin.com/in/vitor-schelb-37b109124/?originalSubdomain=br">
             LinkedIn
           </Button>
         </div>
