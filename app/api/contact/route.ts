@@ -1,18 +1,23 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { feedbackSchema } from "@/app/shared/Data";
+import { limiter } from "../config/limiter";
 
 export async function POST(request: Request) {
   const body = await request.json();
 
   const feedback = feedbackSchema.parse(body);
 
-  // Basic server side validation
+  const remaining = await limiter.removeTokens(1);
 
-  // CSRF Token
-  // Rate Limiting
-  // Serialização(.stringfy) e Desserelização(.parse) de dados // Marshal e Unmarshal
-  //Update later with STARTTLS. Study about safe.
+  if (remaining < 0) {
+    return new NextResponse("Too Many Requests", {
+      status: 429,
+      headers: {
+        "Content-Type": "text/plain",
+      },
+    });
+  }
 
   const { name, email, message } = feedback;
 
