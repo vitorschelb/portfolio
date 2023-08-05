@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-  }
+  },
 };
 
 type Props = {
@@ -47,7 +47,7 @@ export default async function LocaleLayout({
           <PreLoader>
             <div className="h-screen flex flex-row justify-start overflow-hidden">
               <Sidebar />
-              <ToggleLanguage locale={locale}/>
+              <ToggleLanguage locale={locale} />
               <div className="flex-1">{children}</div>
             </div>
           </PreLoader>
