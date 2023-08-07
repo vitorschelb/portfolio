@@ -7,9 +7,9 @@ import { NextIntlClientProvider } from "next-intl";
 
 import PreLoader from "./components/PreLoader";
 import Sidebar from "./components/Sidebar";
-import ToggleLanguage from "./components/ToggleLanguage";
 import { Props } from "../shared/Data";
-import MobileSidebar from "./components/MobileSidebar";
+import MobileNavBar from "./components/MobileNavBar";
+import ToggleLanguageDesktop from "./components/ToggleLanguageDesktop";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -41,14 +41,14 @@ export default async function LocaleLayout({
     <html lang={locale} className={inter.className}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {/* <PreLoader> */}
-            <div className="h-screen flex flex-row justify-start overflow-hidden">
-              <ToggleLanguage />
+          <PreLoader>
+            <div className="h-screen relative flex flex-row justify-start overflow-hidden">
+              <ToggleLanguageDesktop />
+              <MobileNavBar />
               <Sidebar />
-              <MobileSidebar />
               <div className="flex-1">{children}</div>
             </div>
-          {/* </PreLoader> */}
+          </PreLoader>
         </NextIntlClientProvider>
       </body>
     </html>

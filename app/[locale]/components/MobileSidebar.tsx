@@ -6,6 +6,7 @@ import Image from "next/image";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { NavItem } from "../../shared/Data";
 import { useTranslations } from "next-intl";
+import ToggleLanguage from "./ToggleLanguageMobile";
 
 export default function MobileSidebar() {
   const [openMenu, setMenuOpen] = useState(false);
@@ -25,7 +26,7 @@ export default function MobileSidebar() {
 
   return (
     <nav className="lg:hidden">
-      <div className="p-5 absolute">
+      <div className="p-5">
         <AiOutlineMenu
           tabIndex={0}
           aria-label="Open Menu"
