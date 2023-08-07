@@ -41,14 +41,14 @@ export default async function LocaleLayout({
     <html lang={locale} className={inter.className}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <PreLoader>
+          {/* <PreLoader> */}
             <div className="h-screen flex flex-row justify-start overflow-hidden">
               <ToggleLanguage />
               <Sidebar />
               <MobileSidebar />
               <div className="flex-1">{children}</div>
             </div>
-          </PreLoader>
+          {/* </PreLoader> */}
         </NextIntlClientProvider>
       </body>
     </html>
