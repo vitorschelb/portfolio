@@ -10,9 +10,9 @@ type InputChangeEvent = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [state, setState] = useState(initState);
- 
+
   const t = useTranslations("Contact");
-  
+
   const toast = useToast();
 
   const handleChange = ({ target }: InputChangeEvent) => {
@@ -48,7 +48,6 @@ export default function ContactForm() {
           </Box>
         ),
       });
-
     } else {
       toast({
         status: "success",
@@ -65,10 +64,10 @@ export default function ContactForm() {
 
   return (
     <ChakraProvider>
-      <section className="flex flex-col justify-center items-center h-screen bg-clean-white md:px-20 2xl:px-36">
-        <div className="w-1/2">
+      <section className="flex flex-col justify-center items-center h-screen bg-clean-white px-8 md:px-20 2xl:px-36">
+        <div>
           <div className="flex items-center mb-6">
-            <h1 className="tracking-super text-xl font-poppins font-bold text-gray-three">
+            <h1 className="tracking-widest text-xl font-poppins font-bold text-gray-three">
               {t("title")}
             </h1>
             <span className="w-full border-gray-zero border-b" />
