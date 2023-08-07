@@ -28,19 +28,17 @@ export default function ProjectCard({
           <span className="w-full border-gray-zero ml-4 border-b" />
         </div>
 
-        <div className="bg-gray-three bg-opacity-30 p-4 md:text-xs lg:text-base shadow-sm">
-          <p className="text-justify font-medium text">
+        <div className="bg-gray-three bg-opacity-30 p-2 shadow-sm">
+          <p className="text-justify font-medium text-sm mb-3">
             {t(`${project.id}.description` as any)}
           </p>
-        </div>
 
-        <div className="bg-gray-three bg-opacity-30 p-4">
-          <p className="text-justify font-medium font-firacode text-sm md:text-xs lg:text-sm">
+          <p className="text-justify text-xs font-firacode">
             {project.technologies}
           </p>
         </div>
 
-        <div className="flex justify-between mt-4 text-gray-three">
+        <div className="flex justify-between mt-4 font-bold text-gray-three">
           <span>
             {currentIndex + 1} / {totalSlides}
           </span>
@@ -50,7 +48,7 @@ export default function ProjectCard({
               tabIndex={0}
               aria-label="GitHub"
               href="/"
-              className="hover:text-gray-two ease-in-out duration-500"
+              className="hover:text-gray-two ease-in-out duration-500 hover:animate-pulse"
             >
               <Tooltip label="GitHub">
                 <span>
@@ -62,7 +60,7 @@ export default function ProjectCard({
               tabIndex={0}
               aria-label="Website"
               href="/"
-              className="hover:text-gray-two ease-in-out duration-500"
+              className="hover:text-gray-two ease-in-out duration-500 hover:animate-pulse"
             >
               <Tooltip label="Website">
                 <span>

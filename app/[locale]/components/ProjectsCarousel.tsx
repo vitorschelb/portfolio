@@ -1,10 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import ProjectCard from "./ProjectCard";
 import { useState } from "react";
 import projectsData from "../../shared/Data";
 import { AnimatePresence, motion } from "framer-motion";
+import ProjectImageCard from "./ProjectImageCard";
+import {IoMdArrowRoundForward, IoMdArrowRoundBack} from "react-icons/io";
 
 const variants = {
   initial: {
@@ -60,7 +61,17 @@ export default function ProjectsCarousel() {
 
   return (
     <>
-      <div className="flex flex-col min-h-[600px] md:min-h-[450px] justify-center">
+      <div className="hidden lg:flex flex-col items-center md:flex-row min-h-[600px] md:min-h-[400px] justify-center gap-10">
+        <div>
+          <button
+            tabIndex={0}
+            aria-label="Previous"
+            className="flex justify-center items-center text-2xl w-12 h-12 p-2 rounded-full bg-gray-three text-clean-white border-gray-three border-2 shadow-sm hover:underline hover:bg-clean-white hover:shadow-md hover:text-gray-three ease-in-out duration-500"
+            onClick={prevSlide}
+          >
+            <IoMdArrowRoundBack />
+          </button>
+        </div>
         <AnimatePresence initial={false} mode="wait">
           <motion.div
             key={currentIndex}
@@ -68,17 +79,12 @@ export default function ProjectsCarousel() {
             animate="animate"
             initial="initial"
             exit="exit"
-            className="grid items-center justify-around md:flex"
+            className="gap-30 md:flex"
           >
-            <div className="flex md:max-w-lg 2xl:max-w-2xl bg-gray-three bg-opacity-20 p-4 md:shadow-md">
-              <Image
-                src={slides[currentIndex]}
-                alt="one"
-                width={500}
-                height={500}
-                className="object-cover object-center h-full w-full shadow-md"
-              />
-            </div>
+            <ProjectImageCard project={projectsData[currentIndex]} />
+
+          </motion.div>
+        </AnimatePresence>
             <div>
               <ProjectCard
                 project={projectsData[currentIndex]}
@@ -86,27 +92,16 @@ export default function ProjectsCarousel() {
                 totalSlides={slides.length}
               />
             </div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-
-      <div className="flex justify-evenly 2xl:mt-10 ">
-        <button
-          tabIndex={0}
-          aria-label="Previous"
-          className="p-6 w-44 bg-gray-three text-clean-white font-poppins font-medium border-gray-three border-2 shadow-sm hover:underline hover:bg-clean-white hover:shadow-md hover:text-gray-three ease-in-out duration-500"
-          onClick={prevSlide}
-        >
-          Previous
-        </button>
-        <button
-          tabIndex={0}
-          aria-label="Next"
-          className="p-6 w-44 bg-gray-three text-clean-white font-poppins font-medium border-gray-three border-2 shadow-sm hover:underline hover:bg-clean-white hover:shadow-md hover:text-gray-three ease-in-out duration-500"
-          onClick={nextSlide}
-        >
-          Next
-        </button>
+        <div>
+          <button
+            tabIndex={0}
+            aria-label="Next"
+            className="flex justify-center items-center text-2xl w-12 h-12 rounded-full bg-gray-three text-clean-white border-gray-three border-2 shadow-sm hover:underline hover:bg-clean-white hover:shadow-md hover:text-gray-three ease-in-out duration-500"
+            onClick={nextSlide}
+          >
+            <IoMdArrowRoundForward />
+          </button>
+        </div>
       </div>
     </>
   );
