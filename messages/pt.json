@@ -14,6 +14,7 @@
     "navList_contact_label": "CONTATO"
   },
   "About": {
+    "title": "SOBRE",
     "about_first_text": "Atualmente, trabalho na equipe de desenvolvimento e mentoria de projetos na PodCodar.",
     "about_second_text": "Percebo a programação como uma ferramenta poderosa para a transformação social. Meu objetivo é desenvolver soluções inovadoras, otimizar processos e construir tecnologias que possam gerar impactos positivos em várias áreas da vida.",
     "about_third_text": "Mestre em Teoria da História e Humanidades Digitais, focado nos impactos das transformações tecnológicas nas práticas de lembrar e esquecer entre os usuários em redes de mídia social.",
@@ -36,5 +37,8 @@
     "message": "Mensagem",
     "toast": "Mensagem enviada com sucesso!",
     "error": "Erro ao enviar mensagem!"
+  },
+  "Projects": {
+    "title": "PROJETOS"
   }
 }

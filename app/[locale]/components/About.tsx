@@ -48,7 +48,7 @@ export default function About() {
       <div className="col-span-2 mt-24 flex flex-col gap-6 lg:justify-center 2xl:col-span-1">
         <div className="flex justify-around items-center">
           <h1 className="text-xl font-bold tracking-super mr-10 font-poppins text-gray-three">
-            ABOUT
+            {t("title")}
           </h1>
           <span className="border-b border-gray-zero w-full" />
         </div>
