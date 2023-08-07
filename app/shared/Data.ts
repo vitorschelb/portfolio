@@ -1,7 +1,12 @@
 import { StaticImageData } from "next/image";
-import podcodar from "../../public/podcodar.jpeg";
+import podcodar from "../../public/podcodar.png";
 import portfolio from "../../public/portfolio.png";
 import { z } from "zod";
+
+export type Props = {
+  children: React.ReactNode;
+  params: { locale: string };
+};
 
 export const feedbackSchema = z.object({
   name: z

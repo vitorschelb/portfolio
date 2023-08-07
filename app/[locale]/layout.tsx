@@ -1,6 +1,6 @@
 import "../globals.css";
 
-import { Open_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
@@ -8,8 +8,10 @@ import { NextIntlClientProvider } from "next-intl";
 import PreLoader from "./components/PreLoader";
 import Sidebar from "./components/Sidebar";
 import ToggleLanguage from "./components/ToggleLanguage";
+import { Props } from "../shared/Data";
+import MobileSidebar from "./components/MobileSidebar";
 
-const openSans = Open_Sans({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Vitor Schelb Portfolio",
@@ -18,11 +20,6 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
   },
-};
-
-type Props = {
-  children: React.ReactNode;
-  params: { locale: string };
 };
 
 export function generateStaticParams() {
@@ -41,13 +38,14 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={inter.className}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <PreLoader>
             <div className="h-screen flex flex-row justify-start overflow-hidden">
+              <ToggleLanguage />
               <Sidebar />
-              <ToggleLanguage locale={locale} />
+              <MobileSidebar />
               <div className="flex-1">{children}</div>
             </div>
           </PreLoader>

@@ -2,13 +2,11 @@
 import React from "react";
 import Link from "next-intl/link";
 import { ChakraProvider, Tooltip } from "@chakra-ui/react";
+import { useLocale } from "next-intl";
 
-type Props = {
-  locale: string;
-};
-
-export default function ToggleLanguage({ locale }: Props) {
+export default function ToggleLanguage() {
   const lgSelected = "bg-gray-three shadow-sm text-clean-white";
+  const locale = useLocale()
 
   return (
     <ChakraProvider>
