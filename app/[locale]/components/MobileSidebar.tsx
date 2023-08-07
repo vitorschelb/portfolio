@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
@@ -6,7 +7,7 @@ import { SiGithub, SiLinkedin } from "react-icons/si";
 import { NavItem } from "../../shared/Data";
 import { useTranslations } from "next-intl";
 
-export default function MobileNavbar() {
+export default function MobileSidebar() {
   const [openMenu, setMenuOpen] = useState(false);
   const handleMenu = () => {
     setMenuOpen(!openMenu);
@@ -24,7 +25,7 @@ export default function MobileNavbar() {
 
   return (
     <nav className="lg:hidden">
-      <div className="px-5 py-5 absolute">
+      <div className="p-5 absolute">
         <AiOutlineMenu
           tabIndex={0}
           aria-label="Open Menu"
@@ -32,8 +33,6 @@ export default function MobileNavbar() {
           onClick={handleMenu}
         />
       </div>
-
-      {/* Mobile Menu */}
 
       <div
         className={

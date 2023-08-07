@@ -1,10 +1,9 @@
 "use client";
-
-import MobileNavbar from "./MobileNavbar";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { useTranslations } from "next-intl";
 import { NavItem } from "../../shared/Data";
 import Link from "next-intl/link";
+import MobileSidebar from "./MobileSidebar";
 
 export default function Sidebar() {
   const t = useTranslations("Sidebar");
@@ -19,8 +18,6 @@ export default function Sidebar() {
 
   return (
     <nav>
-      {/* Desktop Menu */}
-
       <div className="h-screen hidden lg:flex lg:flex-col lg:w-64 items-center justify-center bg-gray-three text-clean-white font-poppins font-medium text-center shadow-xl">
         <ul className="flex flex-col w-full">
           {navList.map((navItem, i) => (
@@ -53,7 +50,6 @@ export default function Sidebar() {
         </div>
       </div>
 
-      <MobileNavbar />
     </nav>
   );
 }
