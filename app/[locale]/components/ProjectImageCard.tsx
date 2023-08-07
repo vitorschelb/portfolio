@@ -11,7 +11,7 @@ type ProjectProp = {
 export default function ProjectImageCard({ project }: ProjectProp) {
   return (
     <div className="flex flex-col justify-center p-4 group bg-gray-three bg-opacity-20 hover:bg-opacity-50 cursor-pointer shadow-md">
-      <div className="relative flex max-w-[500px] max-h-[500px] shadow-sm">
+      <div className="relative flex min-w-[500px] min-h-[500px] shadow-sm">
         <Image
           src={project.image}
           alt="one"

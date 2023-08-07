@@ -23,7 +23,7 @@ export default function MobileCarousel() {
         className="my-swiper"
       >
         <SwiperSlide className="swiper-slide">
-          <div className="flex max-w-[500px] max-h-[500px] shadow-sm">
+          <div className="flex min-w-[500px] min-h-[500px] shadow-sm">
             <Image
               src="/portfolio.png"
               alt="one"
@@ -34,7 +34,7 @@ export default function MobileCarousel() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex max-w-[500px] max-h-[500px] shadow-sm">
+          <div className="flex min-w-[500px] min-h-[500px] shadow-sm">
             <Image
               src="/podcodar.png"
               alt="one"
