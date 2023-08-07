@@ -31,7 +31,7 @@ export default function Hero() {
         <p className="text-justify mb-6 text-gray-zero">{t("description")}</p>
 
         <div className="flex flex-col items-center gap-3 lg:flex-row lg:items-start lg:gap-8 2xl:justify-start">
-          <Button aria-label="Download CV" href={"/"}>Download CV</Button>
+          <Button aria-label="Download CV" href={"https://drive.google.com/drive/folders/1oC0u7sHQbww3NYNVcddHTg1hlMn0ZXor?usp=drive_link"}>Curriculum</Button>
           <Button aria-label="LinkedIn" href="https://www.linkedin.com/in/vitor-schelb-37b109124/?originalSubdomain=br">
             LinkedIn
           </Button>

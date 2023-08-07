@@ -3,7 +3,7 @@ import { SiGithub, SiLinkedin } from "react-icons/si";
 import { useTranslations } from "next-intl";
 import { NavItem } from "../../shared/Data";
 import Link from "next-intl/link";
-import ToggleLanguageDesktop from "./ToggleLanguageDesktop";
+import { ChakraProvider, Tooltip } from "@chakra-ui/react";
 
 export default function Sidebar() {
   const t = useTranslations("Sidebar");
@@ -31,23 +31,36 @@ export default function Sidebar() {
           </Link>
         ))}
       </ul>
-      <div className="mt-10 flex gap-4 text-clean-white text-2xl">
-        <Link
-          tabIndex={0}
-          aria-label="Github"
-          href="https://github.com/vitorschelb"
-        >
-          <SiGithub className="hover:text-gray-two ease-in-out duration-500" />
-        </Link>
-        <Link
-          tabIndex={0}
-          aria-label="LinkedIn"
-          href="https://www.linkedin.com/in/vitor-schelb-37b109124/?originalSubdomain=br"
-        >
-          <SiLinkedin className="hover:text-gray-two ease-in-out duration-500" />
-        </Link>
-      </div>
-  
+      <ChakraProvider>
+        <div className="mt-10 flex gap-4 text-clean-white text-2xl">
+          <Link
+            tabIndex={0}
+            aria-label="Github"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/vitorschelb"
+          >
+            <Tooltip label="GitHub">
+              <span>
+                <SiGithub className="hover:text-gray-two ease-in-out duration-500" />
+              </span>
+            </Tooltip>
+          </Link>
+          <Link
+            tabIndex={0}
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/vitor-schelb-37b109124/?originalSubdomain=br"
+          >
+            <Tooltip label="GitHub">
+              <span>
+                <SiLinkedin className="hover:text-gray-two ease-in-out duration-500" />
+              </span>
+            </Tooltip>
+          </Link>
+        </div>
+      </ChakraProvider>
     </nav>
   );
 }

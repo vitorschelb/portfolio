@@ -47,7 +47,9 @@ export default function ProjectCard({
             <Link
               tabIndex={0}
               aria-label="GitHub"
-              href="/"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={project.repoURL}
               className="hover:text-gray-two ease-in-out duration-500 hover:animate-pulse"
             >
               <Tooltip label="GitHub">
@@ -59,7 +61,9 @@ export default function ProjectCard({
             <Link
               tabIndex={0}
               aria-label="Website"
-              href="/"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={project.deployURL}
               className="hover:text-gray-two ease-in-out duration-500 hover:animate-pulse"
             >
               <Tooltip label="Website">

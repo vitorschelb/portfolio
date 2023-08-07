@@ -45,16 +45,16 @@ export const projectsData: Project[] = [
   {
     id: "my-portfolio",
     image: portfolio,
-    repoURL: "/",
-    deployURL: "/",
+    repoURL: "https://github.com/vitorschelb/portfolio",
+    deployURL: "https://vitorschelb.dev",
     technologies:
       "Next TypeScript Tailwind Framer-Motion ChakraUI Next-intl Nodemailer",
   },
   {
     id: "podcodar-app",
     image: podcodar,
-    repoURL: "https://github.com/nicolasbrandao/fake-store",
-    deployURL: "/",
+    repoURL: "https://github.com/podcodar/app",
+    deployURL: "https://github.com/podcodar/app",
     technologies:
       "Next TypeScript NextAuth Prisma Docker Tailwind-Styled-Components Zod",
   },

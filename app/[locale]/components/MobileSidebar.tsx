@@ -78,6 +78,8 @@ export default function MobileSidebar() {
           <div className="flex justify-center items-center text-2xl gap-4 mb-36 text-clean-white">
             <Link
               tabIndex={0}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="GitHub"
               href="https://github.com/vitorschelb"
             >
@@ -85,6 +87,8 @@ export default function MobileSidebar() {
             </Link>
             <Link
               tabIndex={0}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               href="https://www.linkedin.com/in/vitor-schelb-37b109124/?originalSubdomain=br"
             >
