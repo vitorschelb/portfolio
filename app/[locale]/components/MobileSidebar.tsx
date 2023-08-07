@@ -6,7 +6,6 @@ import Image from "next/image";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { NavItem } from "../../shared/Data";
 import { useTranslations } from "next-intl";
-import ToggleLanguage from "./ToggleLanguageMobile";
 
 export default function MobileSidebar() {
   const [openMenu, setMenuOpen] = useState(false);
@@ -50,7 +49,7 @@ export default function MobileSidebar() {
             className="text-2xl text-clean-white mb-4"
           />
         </div>
-        <div className="h-50 w-25">
+        <div>
           <Image
             src="/me.jpeg"
             alt="Image of an 30 years old man's face"
@@ -76,7 +75,7 @@ export default function MobileSidebar() {
               </Link>
             ))}
           </ul>
-          <div className="flex justify-center items-center text-2xl gap-4 text-clean-white">
+          <div className="flex justify-center items-center text-2xl gap-4 mb-36 text-clean-white">
             <Link
               tabIndex={0}
               aria-label="GitHub"
