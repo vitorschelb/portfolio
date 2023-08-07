@@ -1,6 +1,7 @@
 {
   "Hero": {
-    "description": "Apaixonado por transformar ideias em realidade, melhorando constantemente minhas habilidades técnicas e a capacidade de conectar diferentes áreas para criar soluções ótimas tanto para os usuários quanto para os mantenedores do código."
+    "description": "Apaixonado por transformar ideias em realidade, melhorando constantemente minhas habilidades técnicas e a capacidade de conectar diferentes áreas para criar soluções ótimas tanto para os usuários quanto para os mantenedores do código.",
+    "presentation": "Olá, meu nome é"
   },
   "Blog": {
     "alert": "Em breve!"
@@ -25,13 +26,11 @@
     },
     "podcodar-app": {
       "title": "PodCodarApp",
-      "description": "PodCodar é uma plataforma que conecta a comunidade. [Em desenvolvimento] o social. Meu objetivo é desenvolver soluções inovadoras, otimizar processos e construir tecnologias que possam gerar impactos positivos em várias áreas da vida.",
-      "about_third_text": "Mestre em Teoria da História e Humanidades Digitais, focado nos impactos das transformações tecnológicas nas práticas de lembrar e esquecer entre os usuários em redes de mídia social.",
-      "about_fourth_text": "Com sete anos de experiência em sala de aula como educador, gerenciei e supervisionei efetivamente equipes de estágio e projetos de extensã"
+      "description":"PodCodar App é uma plataforma que conecta a comunidade de desenvolvedores. [Em desenvolvimento]."
     } 
   },
   "Contact": {
-    "title": "ENTRE EM CONTATO",
+    "title": "CONTATO",
     "button": "ENVIAR",
     "name": "Nome",
     "message": "Mensagem",

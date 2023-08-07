@@ -1,6 +1,7 @@
 {
   "Hero": {
-    "description": "Passionate about turning ideas into reality, constantly improving my technical skills and ability to connect different areas to create optimal solutions for both users and code maintainers."
+    "description": "Passionate about turning ideas into reality, constantly improving my technical skills and ability to connect different areas to create optimal solutions for both users and code maintainers.",
+    "presentation": "Hello there, my name is"
   },
   "Blog": {
     "alert": "Coming soon!"
@@ -21,13 +22,11 @@
   "ProjectsCard": {
     "my-portfolio": {
       "title": "Portfolio",
-      "description": "Personal portfolio with autoral original."
+      "description": "Personal portfolio with autoral design."
     },
     "podcodar-app": {
       "title": "PodCodarApp",
-      "description": "PodCodar is a platform that connects the community. [Under development] o social. Meu objetivo é desenvolver soluções inovadoras, otimizar processos e construir tecnologias que possam gerar impactos positivos em várias áreas da vida.",
-      "about_third_text": "Mestre em Teoria da História e Humanidades Digitais, focado nos impactos das transformações tecnológicas nas práticas de lembrar e esquecer entre os usuários em redes de mídia social.",
-      "about_fourth_text": "Com sete anos de experiência em sala de aula como educador, gerenciei e supervisionei efetivamente equipes de estágio e projetos de extensã"
+      "description": "PodCodar App is a platform that connects Dev community. [Under development]."
     }
   },
   "Contact": {

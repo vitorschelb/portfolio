@@ -11,14 +11,14 @@ export default function Hero() {
   
   return (
     <section className="grid h-screen grid-cols-1 px-8 bg-clean-white md:grid-cols-2 md:px-20 md:gap-10 2xl:px-36">
-      <div className="flex flex-col justify-center gap-8 mt-10 ">
-        <h1 className="tracking-widest">Hello there, my name is</h1>
+      <div className="flex flex-col justify-center gap-7 mt-10 ">
+        <h1 className="tracking-widest">{t("presentation")}</h1>
         <h2 className="font-bold text-5xl font-poppins text-gray-three">
           VITOR SCHELB
         </h2>
         <span className="block border-b-4 w-16 border-gray-three" />
 
-        <h2 className="font-light text-xl tracking-tighter h-8 font-poppins text-gray-zero md:text-2xl md:tracking-normal">
+        <h2 className="font-light text-xl tracking-tighter h-8 font-poppins text-gray-zero mb-6 md:text-2xl md:tracking-normal">
           Dynamic{" "}
           <Typed
             className="font-bold text-gray-three font-open-sans"
@@ -28,7 +28,7 @@ export default function Hero() {
             loop
           />
         </h2>
-        <p className="text-justify text-gray-zero">{t("description")}</p>
+        <p className="text-justify mb-6 text-gray-zero">{t("description")}</p>
 
         <div className="flex flex-col items-center gap-3 lg:flex-row lg:items-start lg:gap-8 2xl:justify-start">
           <Button aria-label="Download CV" href={"/"}>Download CV</Button>
@@ -50,6 +50,7 @@ export default function Hero() {
           />
         </div>
       </div>
+
     </section>
   );
 }
