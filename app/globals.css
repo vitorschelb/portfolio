@@ -14,3 +14,13 @@
     scrollbar-width: none; /* Firefox */
   }
 }
+
+.swiper-pagination-bullet-active {
+  background-color: #333333 !important;
+}
+
+.swiper-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
