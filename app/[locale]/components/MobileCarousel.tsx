@@ -31,7 +31,7 @@ export default function MobileCarousel() {
         className="MySwiper"
       >
         <SwiperSlide>
-          <div className=" flex max-w-[600px] max-h-[700px] shadow-sm">
+          <div className=" flex max-w-[600px] max-h-[700px]">
             <Image
               priority={true}
               src="/portfolio.png"
@@ -61,7 +61,7 @@ export default function MobileCarousel() {
             <h1 className="font-poppins text-xs font-semibold text-gray-three tracking-widest shadow-sm bg-[#CFD3D6] absolute m-2 p-1">
               PodCodar WebApp
             </h1>
-            <div className="absolute bottom-0 right-0 bg-[#CFD3D6] m-2 p-1 rounded-full shadow-sm">
+            <div className="absolute bottom-0 right-0 bg-[#CFD3D6] m-2 p-1 rounded-full">
               <AddIcon className="text-2xl text-gray-three animate-pulse ease-in-out duration-1000" />
             </div>
           </div>
