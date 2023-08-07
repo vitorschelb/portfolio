@@ -59,7 +59,7 @@ export default function MobileCarousel() {
               className="object-cover h-full w-full relative"
             />
             <h1 className="font-poppins text-xs font-semibold text-gray-three tracking-widest shadow-sm bg-[#CFD3D6] absolute m-2 p-1">
-              Pod WebApp
+              PodCodar WebApp
             </h1>
             <div className="absolute bottom-0 right-0 bg-[#CFD3D6] m-2 p-1 rounded-full">
               <AddIcon className="text-2xl text-gray-three animate-pulse ease-in-out duration-1000" />
