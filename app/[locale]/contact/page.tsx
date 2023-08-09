@@ -1,7 +1,7 @@
-import ContactForm from "../components/ContactForm";
+import ContactForm from "../../modules/ContactForm";
 import { PageTransition } from "../components/PageTransition";
 
-export default function PageProjects() {
+export default function PageContact() {
   return (
     <main>
       <PageTransition>

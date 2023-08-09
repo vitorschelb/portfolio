@@ -1,7 +1,7 @@
 import { PageTransition } from "../components/PageTransition";
-import Blog from "../components/Blog";
+import Blog from "../../modules/Blog";
 
-export default function BlogFunction() {
+export default function PageBlog() {
   return (
     <main>
       

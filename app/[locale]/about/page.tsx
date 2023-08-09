@@ -1,4 +1,4 @@
-import About from "../components/About";
+import About from "../../modules/About";
 import { PageTransition } from "../components/PageTransition";
 
 export default function PageAbout() {

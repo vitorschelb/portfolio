@@ -1,4 +1,4 @@
-import Hero from "./components/Hero";
+import Hero from "../modules/Hero";
 import { PageTransition } from "./components/PageTransition";
 
 export default function Home() {
