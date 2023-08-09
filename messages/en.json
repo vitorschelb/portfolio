@@ -1,7 +1,8 @@
 {
   "Hero": {
     "description": "Passionate about turning ideas into reality, constantly improving my technical skills and ability to connect different areas to create optimal solutions for both users and code maintainers.",
-    "presentation": "Hello there, my name is"
+    "presentation": "Hello there, my name is",
+    "cv": "https://drive.google.com/file/d/1-lX56bI2Tail4D5M61SPsQWA8O-OKMcN/view?usp=drive_link"
   },
   "Blog": {
     "alert": "Coming soon!"
@@ -23,11 +24,23 @@
   "ProjectsCard": {
     "my-portfolio": {
       "title": "Portfolio",
-      "description": "Personal portfolio with autoral design."
+      "description": "Personal portfolio with autoral design.",
+      "subtitle": "Turning Ideas into Digital Solutions.",
+      "about": "Within my personal portfolio, you'll discover a collection of projects and ventures that showcase my ability to transform ideas into relevant digital solutions. All of this is achieved through an accessible and minimalist interface, designed to provide the best user experience.",
+      "feat_one": "Responsive and Accessible Design",
+      "feat_two": "Intuitive Navigation",
+      "feat_three": "Fluid and Elegant Animations",
+      "feat_four": "Fast and Efficient Loading",
+      "feat_five": "Language Support",
+      "feat_six": "Security Standards"
     },
     "podcodar-app": {
       "title": "PodCodarApp",
       "description": "PodCodar App is a platform that connects Dev community. [Under development]."
+    },
+    "Common": {
+      "features": "Features",
+      "technologies": "Technologies"
     }
   },
   "Contact": {
@@ -41,5 +54,4 @@
   "Projects": {
     "title": "PROJECTS"
   }
-  
 }

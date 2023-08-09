@@ -1,22 +1,16 @@
 import { SiGithub } from "react-icons/si";
 import { FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
-import { Project } from "../../shared/Data";
 import { useTranslations } from "next-intl";
 import { ChakraProvider, Tooltip } from "@chakra-ui/react";
+import { useProjects } from "@/app/contexts/ProjectsContext";
 
-type ProjectProp = {
-  project: Project;
-  currentIndex: number;
-  totalSlides: number;
-};
 
-export default function ProjectCard({
-  project,
-  currentIndex,
-  totalSlides,
-}: ProjectProp) {
+export default function ProjectCard() {
+  const { currentIndex, project, totalSlides } = useProjects();
+  
   const t = useTranslations("ProjectsCard");
+ 
 
   return (
     <ChakraProvider>

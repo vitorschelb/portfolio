@@ -1,11 +1,11 @@
 "use client";
 
 import ProjectCard from "./ProjectCard";
-import { useState } from "react";
 import projectsData from "../../shared/Data";
 import { AnimatePresence, motion } from "framer-motion";
 import ProjectImageCard from "./ProjectImageCard";
-import {IoMdArrowRoundForward, IoMdArrowRoundBack} from "react-icons/io";
+import { IoMdArrowRoundForward, IoMdArrowRoundBack } from "react-icons/io";
+import { useProjects } from "@/app/contexts/ProjectsContext";
 
 const variants = {
   initial: {
@@ -43,21 +43,7 @@ const variants = {
 };
 
 export default function ProjectsCarousel() {
-  const slides = projectsData.map((project) => project.image);
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
+  const { currentIndex, pictures, prevSlide, nextSlide } = useProjects();
 
   return (
     <>
@@ -81,17 +67,12 @@ export default function ProjectsCarousel() {
             exit="exit"
             className="gap-30 md:flex"
           >
-            <ProjectImageCard project={projectsData[currentIndex]} />
-
+            <ProjectImageCard />
           </motion.div>
         </AnimatePresence>
-            <div>
-              <ProjectCard
-                project={projectsData[currentIndex]}
-                currentIndex={currentIndex}
-                totalSlides={slides.length}
-              />
-            </div>
+        <div>
+          <ProjectCard />
+        </div>
         <div>
           <button
             tabIndex={0}

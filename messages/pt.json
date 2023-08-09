@@ -1,7 +1,8 @@
 {
   "Hero": {
     "description": "Apaixonado por transformar ideias em realidade, melhorando constantemente minhas habilidades técnicas e a capacidade de conectar diferentes áreas para criar soluções ótimas tanto para os usuários quanto para os mantenedores do código.",
-    "presentation": "Olá, meu nome é"
+    "presentation": "Olá, meu nome é",
+    "cv": "https://drive.google.com/file/d/1GGoXmKnWgzDT2q3dkCC4uNagnYw2jYqL/view?usp=drive_link"
   },
   "Blog": {
     "alert": "Em breve!"
@@ -23,11 +24,23 @@
   "ProjectsCard": {
     "my-portfolio": {
       "title": "Portfólio",
-      "description": "Portfólio pessoal com design autoral."
+      "description": "Portfólio pessoal com design autoral.",
+      "subtitle": "Transformando Ideias em Soluções Digitais.",
+      "about": "Dentro do meu portfólio pessoal, você encontrará uma seleção de projetos e empreendimentos que ilustram minha habilidade de transformar ideias em soluções digitais de relevância. Tudo isso é alcançado por meio de uma interface acessível e minimalista, projetada para oferecer a melhor experiência ao usuário.",
+      "feat_one": "Design responsivo e acessível",
+      "feat_two": "Navegação Intuitiva",
+      "feat_three": "Animações fluídase elegantes",
+      "feat_four": "Carregamento rápido e eficiente",
+      "feat_five": "Suporte a Idiomas",
+      "feat_six": "Padrões de Segurança"
     },
     "podcodar-app": {
       "title": "PodCodarApp",
       "description":"PodCodar App é uma plataforma que conecta a comunidade de desenvolvedores. [Em desenvolvimento]."
+    },
+    "Common": {
+      "features": "Características",
+      "technologies": "Tecnologias"
     } 
   },
   "Contact": {
@@ -40,5 +53,6 @@
   },
   "Projects": {
     "title": "PROJETOS"
+
   }
 }

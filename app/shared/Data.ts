@@ -23,6 +23,7 @@ export type Project = {
   repoURL: string;
   deployURL: string;
   technologies: string;
+  about: string;
 };
 
 type Icon = {
@@ -48,7 +49,8 @@ export const projectsData: Project[] = [
     repoURL: "https://github.com/vitorschelb/portfolio",
     deployURL: "https://vitorschelb.dev",
     technologies:
-      "Next TypeScript Tailwind Framer-Motion ChakraUI Next-intl Nodemailer",
+      "Next TypeScript Tailwind Framer-Motion ChakraUI Next-intl Zod Nodemailer",
+    about: "PORTIFAS",
   },
   {
     id: "podcodar-app",
@@ -57,6 +59,7 @@ export const projectsData: Project[] = [
     deployURL: "https://github.com/podcodar/app",
     technologies:
       "Next TypeScript NextAuth Prisma Docker Tailwind-Styled-Components Zod",
+    about: "PODCODAR",
   },
 ];
 

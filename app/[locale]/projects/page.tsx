@@ -1,12 +1,16 @@
 import { PageTransition } from "../components/PageTransition";
-import Projects from "../components/Projects";
+import Projects from "../../modules/Projects";
+import { ProjectsProvider } from "@/app/contexts/ProjectsContext";
+import projectsData from "@/app/shared/Data";
 
 export default function PageProjects() {
   return (
     <main>
-      <PageTransition>
-        <Projects />
-      </PageTransition>
+      <ProjectsProvider slides={projectsData.length}>
+        <PageTransition>
+          <Projects/>
+        </PageTransition>
+      </ProjectsProvider>
     </main>
   );
 }
