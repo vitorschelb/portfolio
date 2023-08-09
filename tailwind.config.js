@@ -37,6 +37,7 @@ module.exports = {
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
       firacode: ["Fira Code", "monospace"],
+      raleway: ["Raleway", "sans-serif"],
     },
     letterSpacing: {
       super: "0.3em",
