@@ -42,7 +42,7 @@ export default function Sidebar() {
           >
             <Tooltip label="GitHub">
               <span>
-                <SiGithub className="hover:text-gray-two ease-in-out duration-500" />
+                <SiGithub className="hover:text-gray-two ease-in-out duration-500 hover:animate-pulse" />
               </span>
             </Tooltip>
           </Link>
@@ -55,7 +55,7 @@ export default function Sidebar() {
           >
             <Tooltip label="GitHub">
               <span>
-                <SiLinkedin className="hover:text-gray-two ease-in-out duration-500" />
+                <SiLinkedin className="hover:text-gray-two ease-in-out duration-500 hover:animate-pulse" />
               </span>
             </Tooltip>
           </Link>
