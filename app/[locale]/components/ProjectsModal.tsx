@@ -11,6 +11,7 @@ import {
 import ProjectsModalContent from "./ProjectsModalContent";
 import { ImEye } from "react-icons/im";
 import { useProjects } from "@/app/contexts/ProjectsContext";
+import { useState } from "react";
 
 type ProjectsModalProps = {
   projectIndex?: number;
@@ -18,10 +19,10 @@ type ProjectsModalProps = {
 
 export default function ProjectsModal({ projectIndex }: ProjectsModalProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { setCurrentIndex, currentIndex } = useProjects();
-
+  const { setCurrentIndex} = useProjects();
+  
   const openModalWithIndex = () => {
-    alert("MUDOU!");
+    alert("CLICOU NO OLHO!");
     setCurrentIndex(projectIndex ?? 0);
     onOpen();
   };
@@ -36,7 +37,7 @@ export default function ProjectsModal({ projectIndex }: ProjectsModalProps) {
       <div className="absolute bottom-0 flex justify-center items-center right-0 ls:mr-8 bg-[#CFD3D6] m-2 p-1 rounded-full lg:hidden">
         <ImEye
           onClick={openModalWithIndex}
-          className="text-2xl text-gray-three ls:text-4xl animate-pulse ease-in-out duration-1000"
+          className="text-4xl absolute text-gray-three ls:text-4xl animate-pulse ease-in-out duration-1000"
         />
       </div>
       <Modal
