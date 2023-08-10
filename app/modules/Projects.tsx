@@ -9,7 +9,7 @@ export default function Projects() {
   const t = useTranslations("Projects");
   return (
     <ChakraProvider>
-    <section className="flex flex-col justify-center h-screen bg-clean-white gap-6 px-8 md:px-20 2xl:px-36">
+    <section className="flex flex-col overflow-auto justify-center h-screen bg-clean-white gap-6 px-8 md:px-20 2xl:px-36">
       <div className="flex items-center justify-around">
         <h1 className="tracking-super text-xl font-bold font-poppins mr-10 text-gray-three">
           {t("title")}

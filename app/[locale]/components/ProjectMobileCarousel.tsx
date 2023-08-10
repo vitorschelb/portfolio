@@ -14,7 +14,7 @@ export default function ProjectMobileCarousel() {
   const t = useTranslations("ProjectsCard");
 
   return (
-    <div className="lg:hidden flex justify-center items-center p-2 my-6 bg-[#CFD3D6]">
+    <div className="lg:hidden z-0 flex justify-center items-center p-2 my-6 bg-[#CFD3D6]">
       <Swiper
         effect={"coverflow"}
         coverflowEffect={{
@@ -47,12 +47,13 @@ export default function ProjectMobileCarousel() {
               className="object-cover h-full w-full relative"
               placeholder="blur"
               blurDataURL="data:..."
+              
             />
             <h1 className="font-poppins text-xs font-semibold text-gray-three tracking-widest shadow-sm bg-[#CFD3D6] absolute m-2 p-1">
             {t(`${projectItem.id}.title`)}
             </h1>
           </div>
-            <ProjectsModal projectIndex={index}/>
+            <ProjectsModal projectIndex={index} />
         </SwiperSlide>
       ))}
 

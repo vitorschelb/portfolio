@@ -64,7 +64,7 @@ export default function ContactForm() {
 
   return (
     <ChakraProvider>
-      <section className="flex flex-col justify-center items-center h-screen bg-clean-white px-8 md:px-20 2xl:px-36">
+      <section className="flex overflow-auto flex-col justify-center items-center h-screen bg-clean-white px-8 md:px-20 2xl:px-36">
         <div>
           <div className="flex items-center mb-6">
             <h1 className="tracking-widest text-xl mr-10 font-poppins font-bold text-gray-three">
