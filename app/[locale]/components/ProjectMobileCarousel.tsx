@@ -51,8 +51,8 @@ export default function ProjectMobileCarousel() {
             <h1 className="font-poppins text-xs font-semibold text-gray-three tracking-widest shadow-sm bg-[#CFD3D6] absolute m-2 p-1">
             {t(`${projectItem.id}.title`)}
             </h1>
-            <ProjectsModal projectIndex={index}/>
           </div>
+            <ProjectsModal projectIndex={index}/>
         </SwiperSlide>
       ))}
 
