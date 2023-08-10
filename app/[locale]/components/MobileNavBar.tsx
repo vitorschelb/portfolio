@@ -1,13 +1,16 @@
-import MobileSidebar from "./MobileSidebar";
+"use client";
+import { ChakraProvider } from "@chakra-ui/react";
+import MobileSideBar from "./MobileSideBar";
 import ToggleLanguageMobile from "./ToggleLanguageMobile";
+
 
 export default function MobileNavBar() {
   return (
-  
-<nav className="lg:hidden flex justify-between absolute h-30 w-screen top-0 bg-clean-white shadow-sm">
-    <MobileSidebar />
-    <ToggleLanguageMobile  />
-</nav>
-
-  )
+    <ChakraProvider>
+      <nav className="lg:hidden flex justify-between items-center absolute h-30 w-screen top-0 bg-clean-white shadow-sm">
+        <MobileSideBar />
+        <ToggleLanguageMobile  />
+      </nav>
+    </ChakraProvider>
+  );
 }
