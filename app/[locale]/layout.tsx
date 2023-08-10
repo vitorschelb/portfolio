@@ -42,7 +42,7 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <PreLoader>
-            <div className="h-screen relative flex flex-row justify-start overflow-hidden">
+            <div className="h-screen relative flex flex-row justify-start overflow-auto">
               <ToggleLanguageDesktop />
               <MobileNavBar />
               <Sidebar />
