@@ -16,10 +16,7 @@
   },
   "About": {
     "title": "SOBRE",
-    "about_first_text": "Atualmente, trabalho na equipe de desenvolvimento e mentoria de projetos na PodCodar.",
-    "about_second_text": "Percebo a programação como uma ferramenta poderosa para a transformação social. Meu objetivo é desenvolver soluções inovadoras, otimizar processos e construir tecnologias que possam gerar impactos positivos em várias áreas da vida.",
-    "about_third_text": "Mestre em Teoria da História e Humanidades Digitais, focado nos impactos das transformações tecnológicas nas práticas de lembrar e esquecer entre os usuários em redes de mídia social.",
-    "about_fourth_text": "Com sete anos de experiência em sala de aula como educador, gerenciei e supervisionei efetivamente equipes de estágio e projetos de extensão."
+    "about_list": "Atualmente, trabalho na equipe de desenvolvimento e mentoria de projetos na PodCodar.,Percebo a programação como uma ferramenta poderosa para a transformação social. Meu objetivo é desenvolver soluções inovadoras, otimizar processos e construir tecnologias que possam gerar impactos positivos em várias áreas da vida.,Mestre em Teoria da História e Humanidades Digitais, focado nos impactos das transformações tecnológicas nas práticas de lembrar e esquecer entre os usuários em redes de mídia social.,Com sete anos de experiência em sala de aula como educador, gerenciei e supervisionei efetivamente equipes de estágio e projetos de extensão."
   },
   "ProjectsCard": {
     "my-portfolio": {
@@ -27,21 +24,21 @@
       "description": "Portfólio pessoal com design autoral.",
       "subtitle": "Transformando Ideias em Soluções Digitais.",
       "about": "Dentro do meu portfólio pessoal, você encontrará uma seleção de projetos e empreendimentos que ilustram minha habilidade de transformar ideias em soluções digitais de relevância. Tudo isso é alcançado por meio de uma interface acessível e minimalista, projetada para oferecer a melhor experiência ao usuário.",
-      "feat_one": "Design responsivo e acessível",
-      "feat_two": "Navegação Intuitiva",
-      "feat_three": "Animações fluídase elegantes",
-      "feat_four": "Carregamento rápido e eficiente",
-      "feat_five": "Suporte a Idiomas",
-      "feat_six": "Padrões de Segurança"
+      "features": 
+        "Responsividade,Acessibilidade,Intuitividade,Fluidez,Otimização,Multilíngue,Segurança"
     },
     "podcodar-app": {
       "title": "PodCodarApp",
-      "description":"PodCodar App é uma plataforma que conecta a comunidade de desenvolvedores. [Em desenvolvimento]."
+      "description": "PodCodar App é uma plataforma que conecta a comunidade de desenvolvedores. [Em desenvolvimento].",
+      "subtitle": "Democratizando o Aprendizado por meio da Colaboração.",
+      "about": "O PodCodar App é um projeto em desenvolvimento, feito especialmente para a comunidade interna da PodCodar. O MVP (Produto Mínimo Viável) conta com funcionalidades de autenticação, inscrição, registro e até mesmo um processo de integração suave para os novos membros. Além disso, estamos interagindo com bancos de dados e criando perfis personalizados. E as novidades não param por aí! Estamos atualmente trabalhando na interface administrativa, criando um sistema dinâmico de agendamento para receber os novos membros e muitos outros recursos emocionantes que estarão disponíveis em breve!",
+      "features": "Escalabilidade,Responsividade,Acessibilidade,Navegação Intuitiva,Desempenho Otimizado,Confiabilidade,Privacidade dos Dados"
     },
     "Common": {
       "features": "Características",
-      "technologies": "Tecnologias"
-    } 
+      "technologies": "Tecnologias",
+      "visit": "Visitar"
+    }
   },
   "Contact": {
     "title": "CONTATO",
@@ -53,6 +50,5 @@
   },
   "Projects": {
     "title": "PROJETOS"
-
   }
 }

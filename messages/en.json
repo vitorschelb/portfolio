@@ -16,10 +16,7 @@
   },
   "About": {
     "title": "ABOUT",
-    "about_first_text": "Currently, I work in the development and project mentoring team at PodCodar.",
-    "about_second_text": "I perceive programming as a powerful tool for social transformation. My objective is to develop innovative solutions, streamline processes, and build technologies that can yield positive impacts in various areas of life.",
-    "about_third_text": "Master's degree in Theory of History and Digital Humanities, focusing on the impacts of technological transformations on the practices of remembering and forgetting among users in social media networks.",
-    "about_fourth_text": "Seven years of classroom experience as an educator, I have effectively managed and supervised internship teams and extension projects."
+    "about_list": "Currently, I work in the development and project mentoring team at PodCodar.,I perceive programming as a powerful tool for social transformation. My objective is to develop innovative solutions, streamline processes, and build technologies that can yield positive impacts in various areas of life.,Master's degree in Theory of History and Digital Humanities, focusing on the impacts of technological transformations on the practices of remembering and forgetting among users in social media networks.,Seven years of classroom experience as an educator, I have effectively managed and supervised internship teams and extension projects."
   },
   "ProjectsCard": {
     "my-portfolio": {
@@ -27,20 +24,19 @@
       "description": "Personal portfolio with autoral design.",
       "subtitle": "Turning Ideas into Digital Solutions.",
       "about": "Within my personal portfolio, you'll discover a collection of projects and ventures that showcase my ability to transform ideas into relevant digital solutions. All of this is achieved through an accessible and minimalist interface, designed to provide the best user experience.",
-      "feat_one": "Responsive and Accessible Design",
-      "feat_two": "Intuitive Navigation",
-      "feat_three": "Fluid and Elegant Animations",
-      "feat_four": "Fast and Efficient Loading",
-      "feat_five": "Language Support",
-      "feat_six": "Security Standards"
+      "features": "Design responsivo e acessível,Navegação Intuitiva,Animações fluídas,Carregamento rápido,Multilíngue,Segurança"
     },
     "podcodar-app": {
       "title": "PodCodarApp",
-      "description": "PodCodar App is a platform that connects Dev community. [Under development]."
+      "description": "PodCodar App is a platform that connects Dev community. [Under development].",
+      "subtitle": "Democratizing Learning through Collaboration.",
+      "about": "The PodCodar App is an ongoing project, tailored specifically for the PodCodar community's internal use. The MVP (Minimum Viable Product) features functionalities such as authentication, registration, and even a seamless onboarding process for new members. Moreover, we're actively engaging with databases and crafting personalized profiles. And the excitement doesn't end there! We're currently working on an administrative interface, developing a dynamic system for scheduling new member orientations, and many other exciting features that will be available soon!",
+      "features": "Scalability,Responsiveness,Accessibility,Intuitive Navigation,Optimized Performance,Reliability,Security Standards,Data Privacy"
     },
     "Common": {
       "features": "Features",
-      "technologies": "Technologies"
+      "technologies": "Technologies",
+      "visit": "Visit"
     }
   },
   "Contact": {
