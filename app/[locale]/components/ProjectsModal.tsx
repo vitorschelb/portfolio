@@ -23,7 +23,7 @@ export default function ProjectsModal({projectIndex}: ProjectsModalProps) {
   const openModalWithIndex = () => {
     setCurrentIndex((projectIndex ?? currentIndex));
     onOpen();
-    alert(currentIndex)
+    alert("CLICOU!")
   };
 
   return (
