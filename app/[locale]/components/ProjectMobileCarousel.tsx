@@ -35,13 +35,16 @@ export default function ProjectMobileCarousel() {
           clickable: true,
           dynamicBullets: true,
         }}
+        passiveListeners={false}
+        preventClicks={false}
+        preventClicksPropagation={false}
+        resizeObserver={true}
         className="MySwiper"
       >
         {projectsData.map((projectItem, activeModalIndex) => (
           <SwiperSlide key={activeModalIndex} onClick={() => setActiveModalIndex(activeModalIndex)}>
             <div className="flex max-w-[600px] max-h-[700px] shadow-sm">
               <Image
-                
                 priority={true}
                 src={projectItem.image}
                 alt={projectItem.id}
@@ -58,7 +61,6 @@ export default function ProjectMobileCarousel() {
             </div>
           </SwiperSlide>
         ))}
-
         <div className="swiper-pagination"></div>
       </Swiper>
     </div>
