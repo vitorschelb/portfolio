@@ -34,7 +34,7 @@ export default function ProjectsModal({projectIndex}: ProjectsModalProps) {
       <span>
         <div className="absolute bottom-0 flex justify-center items-center right-0 ls:mr-8 bg-[#CFD3D6] m-2 p-1 rounded-full lg:hidden">
           <span>
-            <ImEye role="button" onClick={() => openModalWithIndex()} className="text-2xl text-gray-three ls:text-4xl animate-pulse ease-in-out duration-1000" />
+            <ImEye onTouchStart={() => openModalWithIndex()} role="button" onClick={() => openModalWithIndex()} className="text-2xl text-gray-three ls:text-4xl animate-pulse ease-in-out duration-1000" />
           </span>
         </div>
       </span>
