@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { iconList } from "../shared/Data";
+
 import {
   SiReact,
   SiRedux,
@@ -88,10 +89,10 @@ export default function About() {
       <div className="hidden lg:flex justify-center items-center">
         <div className="h-96 w-60 2xl:h-3/6 2xl:w-6/12">
           <Image
-            src="/me.jpeg"
+            src="/me.webp"
             alt="Photo of a 30-year-old man's face"
             className="h-full w-full object-cover shadow-sm"
-            priority
+            priority = {true}
             width={500}
             height={300}
           />

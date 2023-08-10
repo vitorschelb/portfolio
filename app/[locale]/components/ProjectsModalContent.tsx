@@ -6,11 +6,10 @@ import Link from "next/link";
 
 export default function ProjectsModalContent() {
   const { currentIndex, project, pictures } = useProjects();
-  
+
   const t = useTranslations("ProjectsCard");
-  
+
   const features = t(`${project.id}.features`).split(",");
-  
 
   return (
     <section>
@@ -18,10 +17,12 @@ export default function ProjectsModalContent() {
         <Image
           priority={true}
           src={pictures[currentIndex]}
-          alt="one"
+          alt={project.id}
           width={1000}
           height={300}
           className="object-cover"
+          placeholder="blur"
+          blurDataURL="data:..."
         />
       </div>
       <div className="flex flex-col font-raleway gap-2 mt-4 p-6">
@@ -60,7 +61,14 @@ export default function ProjectsModalContent() {
       </div>
       <footer>
         <div className="w-full flex justify-center items-center h-10 bg-gray-three text-clean-white font-raleway font-semibold gap-2">
-          <Link href={project.deployURL}>{t("Common.visit")}</Link>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            tabIndex={0}
+            href={project.deployURL}
+          >
+            {t("Common.visit")}
+          </Link>
           <GoLinkExternal className="text-lg" />
         </div>
       </footer>

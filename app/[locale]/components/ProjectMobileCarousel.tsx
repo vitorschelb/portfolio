@@ -41,10 +41,12 @@ export default function ProjectMobileCarousel() {
             <Image
               priority={true}
               src={projectItem.image}
-              alt="Ola"
+              alt={projectItem.id}
               width={600}
               height={700}
               className="object-cover h-full w-full relative"
+              placeholder="blur"
+              blurDataURL="data:..."
             />
             <h1 className="font-poppins text-xs font-semibold text-gray-three tracking-widest shadow-sm bg-[#CFD3D6] absolute m-2 p-1">
             {t(`${projectItem.id}.title`)}

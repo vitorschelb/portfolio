@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
-import podcodar from "../../public/podcodar.png";
-import portfolio from "../../public/portfolio.png";
+import podcodar from "../../public/podcodar.webp";
+import portfolio from "../../public/portfolio.webp";
 import { z } from "zod";
 
 export type Props = {

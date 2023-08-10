@@ -16,6 +16,8 @@ export default function ProjectImageCard() {
           width={500}
           height={500}
           className="object-cover h-full w-full "
+          placeholder="blur"
+          blurDataURL="data:..."
         />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ">
           <ProjectsModal />
