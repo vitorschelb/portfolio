@@ -32,7 +32,7 @@ export default function ProjectsModal({projectIndex}: ProjectsModalProps) {
         className="text-[#CFD3D6] text-8xl group-hover:animate-float hidden lg:block"
       />
       <div className="absolute bottom-0 flex justify-center items-center right-0 ls:mr-8 bg-[#CFD3D6] m-2 p-1 rounded-full lg:hidden">
-        <ImEye onClick={() => openModalWithIndex()} className="text-2xl text-gray-three ls:text-4xl animate-pulse ease-in-out duration-1000" />
+        <ImEye role="button" onClick={() => openModalWithIndex()} className="text-2xl text-gray-three ls:text-4xl animate-pulse ease-in-out duration-1000" />
       </div>
       <Modal
         size="xl"
