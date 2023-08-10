@@ -16,7 +16,8 @@ import Link from "next/link";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 
 export default function MobileSideBar() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose,  } = useDisclosure();
+
 
   const t = useTranslations("Sidebar");
 
@@ -56,6 +57,7 @@ export default function MobileSideBar() {
                     href={navItem.href}
                     aria-label={navItem.label}
                     tabIndex={0}
+                    onClick={onClose}
                   >
                     <li className="p-3 w-full text-center border-gray-two border-b">
                       {navItem.label}
@@ -70,6 +72,7 @@ export default function MobileSideBar() {
                   rel="noopener noreferrer"
                   aria-label="GitHub"
                   href="https://github.com/vitorschelb"
+                  
                 >
                   <SiGithub />
                 </Link>
