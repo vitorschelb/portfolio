@@ -13,7 +13,7 @@ import { useState } from "react";
 
 export default function ProjectMobileCarousel() {
   const t = useTranslations("ProjectsCard");
-  const [activeModalIndex, setActiveModalIndex] = useState<number | null>(null);
+  const [activeModalIndex, setActiveModalIndex] = useState(0);
 
   return (
     <div className="lg:hidden z-0 flex justify-center items-center p-2 my-6 bg-[#CFD3D6]">
