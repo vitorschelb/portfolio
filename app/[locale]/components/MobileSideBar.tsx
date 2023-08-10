@@ -36,7 +36,7 @@ export default function MobileSideBar() {
         <DrawerOverlay />
         <DrawerContent css={{ backgroundColor: "rgb(51, 51, 51)" }}>
           <DrawerCloseButton fontSize={"2xl"} textColor={"white"} />
-          <DrawerHeader p={"0"}>
+          <DrawerHeader>
             <Image
               src="/me.webp"
               alt="Image of an 30 years old man's face"
