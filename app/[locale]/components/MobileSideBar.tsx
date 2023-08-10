@@ -16,10 +16,17 @@ import Link from "next/link";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 
 export default function MobileSideBar() {
-  const { isOpen, onOpen, onClose,  } = useDisclosure();
-
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const t = useTranslations("Sidebar");
+
+  // const variant = useBreakpointValue({
+  //   sm: "320px",
+  //   md: "768px",
+  //   lg: "960px",
+  //   xl: "1200px",
+  //   "2xl": "1536px",
+  // });
 
   const navList: NavItem[] = [
     { label: t("navList_home_label"), href: "/" },
@@ -29,6 +36,14 @@ export default function MobileSideBar() {
     { label: t("navList_contact_label"), href: "/contact" },
   ];
 
+  const breakpoints = {
+    sm: "30em", // 480px
+    md: "48em", // 768px
+    lg: "62em", // 992px
+    xl: "80em", // 1280px
+    "2xl": "96em", // 1536px
+  };
+
   return (
     <>
       <HamburgerIcon fontSize={"3xl"} marginLeft={"4"} onClick={onOpen} />
@@ -36,17 +51,20 @@ export default function MobileSideBar() {
         <DrawerOverlay />
         <DrawerContent css={{ backgroundColor: "rgb(51, 51, 51)" }}>
           <DrawerCloseButton fontSize={"2xl"} textColor={"white"} />
-          <DrawerHeader>
-            <Image
-              src="/me.webp"
-              alt="Image of an 30 years old man's face"
-              className="object-cover h-full w-full"
-              placeholder="blur"
-              blurDataURL="data:..."
-              priority={true}
-              width={300}
-              height={300}
-            />
+
+          <DrawerHeader className="flex justify-center items-center">
+            <div className="hidden xs:flex xs:max-w-[200px] xs:max-h-[200px]">
+              <Image
+                src="/me.webp"
+                alt="Image of an 30 years old man's face"
+                className="object-cover h-full w-full"
+                placeholder="blur"
+                width={200}
+                height={200}
+                blurDataURL="data:..."
+                priority={true}
+              />
+            </div>
           </DrawerHeader>
           <DrawerBody p={"0"}>
             <div className="flex flex-col items-center justify-evenly h-full text-clean-white ">
@@ -72,7 +90,6 @@ export default function MobileSideBar() {
                   rel="noopener noreferrer"
                   aria-label="GitHub"
                   href="https://github.com/vitorschelb"
-                  
                 >
                   <SiGithub />
                 </Link>
