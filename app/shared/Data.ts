@@ -18,7 +18,7 @@ export const feedbackSchema = z.object({
 });
 
 export type Project = {
-  id: string;
+  id: "my-portfolio" | "podcodar-app";
   image: StaticImageData;
   repoURL: string;
   deployURL: string;
@@ -35,12 +35,6 @@ export type NavItem = {
   label: string;
   href: string;
 };
-
-export type AboutItem = {
-  text: string;
-};
-
-//TODO: Use only messages to store data.
 
 export const projectsData: Project[] = [
   {

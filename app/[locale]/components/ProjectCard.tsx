@@ -17,19 +17,20 @@ export default function ProjectCard() {
       <div className="flex flex-col h-full w-full md:max-w-[300px] p-4 bg-gray-three bg-opacity-20 justify-between shadow-md">
         <div className="flex items-center mb-6">
           <h1 className="font-bold tracking-widest text-lg font-poppins">
-            {t(`${project.id}.title` as any)}
+            {t(`${project.id}.title`)}
           </h1>
           <span className="w-full border-gray-zero ml-4 border-b" />
         </div>
 
         <div className="bg-gray-three bg-opacity-30 p-2 shadow-sm">
           <p className="text-justify font-medium text-sm mb-3">
-            {t(`${project.id}.description` as any)}
+            {t(`${project.id}.description`)}
           </p>
 
-          <p className="text-justify text-xs font-firacode">
+          <p className="text-justify text-xs text-gray-three font-semibold font-firacode">
             {project.technologies}
           </p>
+          
         </div>
 
         <div className="flex justify-between mt-4 font-bold text-gray-three">

@@ -9,6 +9,7 @@ type ProjectsContextType = {
   project: Project;
   prevSlide: () => void;
   nextSlide: () => void;
+  setCurrentIndex: (index: number) => void;
 };
 
 type ProjectsProviderProps = {
@@ -53,6 +54,7 @@ export const ProjectsProvider: React.FC<ProjectsProviderProps> = ({
     project,
     prevSlide,
     nextSlide,
+    setCurrentIndex,
   };
 
   return (

@@ -1,6 +1,5 @@
-"use client"
+"use client";
 import Image from "next/image";
-import { AboutItem } from "../shared/Data";
 import { iconList } from "../shared/Data";
 import {
   SiReact,
@@ -36,12 +35,7 @@ const iconElements = [
 export default function About() {
   const t = useTranslations("About");
 
-  const aboutList: AboutItem[] = [
-    { text: t("about_first_text") },
-    { text: t("about_second_text") },
-    { text: t("about_third_text") },
-    { text: t("about_fourth_text") },
-  ];
+  const aboutList = t("about_list").split(".,");
 
   return (
     <section className="h-screen bg-clean-white overflow-auto lg:no-scrollbar grid grid-cols-1 px-8 gap-10 md:px-20 lg:grid-cols-3 2xl:px-36 2xl:grid-cols-2 ">
@@ -53,12 +47,12 @@ export default function About() {
           <span className="border-b border-gray-zero w-full" />
         </div>
         <ul>
-          {aboutList.map((aboutItem, i) => (
+          {aboutList.map((aboutItem) => (
             <li
-              key={i}
+              key={aboutItem}
               className="flex mb-2 text-justify text-gray-zero before:content-['➤'] before:mr-2"
             >
-              {aboutItem.text}
+              {aboutItem}
             </li>
           ))}
         </ul>

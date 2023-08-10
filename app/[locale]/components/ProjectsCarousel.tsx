@@ -1,7 +1,6 @@
 "use client";
 
 import ProjectCard from "./ProjectCard";
-import projectsData from "../../shared/Data";
 import { AnimatePresence, motion } from "framer-motion";
 import ProjectImageCard from "./ProjectImageCard";
 import { IoMdArrowRoundForward, IoMdArrowRoundBack } from "react-icons/io";
@@ -43,7 +42,7 @@ const variants = {
 };
 
 export default function ProjectsCarousel() {
-  const { currentIndex, pictures, prevSlide, nextSlide } = useProjects();
+  const { currentIndex, prevSlide, nextSlide } = useProjects();
 
   return (
     <>

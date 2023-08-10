@@ -2,59 +2,55 @@ import { GoLinkExternal } from "react-icons/go";
 import Image from "next/image";
 import { useProjects } from "@/app/contexts/ProjectsContext";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function ProjectsModalContent() {
   const { currentIndex, project, pictures } = useProjects();
+  
   const t = useTranslations("ProjectsCard");
-
-  const featureKeys = [
-    "feat_one",
-    "feat_two",
-    "feat_three",
-    "feat_four",
-    "feat_five",
-    "feat_six",
-  ];
+  
+  const features = t(`${project.id}.features`).split(",");
+  
 
   return (
     <section>
-      <div className="flex max-w-full max-h-full border-b-2 border-gray-three shadow-sm">
+      <div className="flex max-w-full max-h-[300px] border-b-2 border-gray-three shadow-sm">
         <Image
           priority={true}
           src={pictures[currentIndex]}
           alt="one"
-          width={500}
-          height={500}
+          width={1000}
+          height={300}
           className="object-cover"
         />
       </div>
       <div className="flex flex-col font-raleway gap-2 mt-4 p-6">
         <div>
           <h1 className="text-gray-three text-3xl font-bold">
-            {t(`${project.id}.title` as any)}
+            {t(`${project.id}.title`)}
           </h1>
           <h2 className="text-gray-zero font-bold text-sm uppercase">
-            {t(`${project.id}.subtitle` as any)}
+            {t(`${project.id}.subtitle`)}
           </h2>
         </div>
         <span className="block border-b border-gray-zero w-full" />
-        <p className="text-justify text-sm">
-          {t(`${project.id}.about` as any)}
-        </p>
+        <p className="text-justify text-sm">{t(`${project.id}.about`)}</p>
         <div className="flex flex-col gap-2 mt-4">
-          <h3 className="font-raleway font-bold">{t("Common.features")}</h3>
-          {featureKeys.map((featKey, i) => (
-            <p className="text-justify text-xs font-semibold" key={i}>
-              {t(`${project.id}.${featKey}` as any)}
-            </p>
-          ))}
-
-          <h3 className="font-raleway font-bold">{t("Common.technologies")}</h3>
-          <div className="flex flex-wrap bg-purple-800">
+          <div className="flex flex-wrap justify-center">
+            {features.map((feat) => (
+              <p
+                key={feat}
+                className="inline-block bg-gray-three text-clean-white px-2 py-1 m-1 text-xs font-semibold shadow-md before:content-['➤'] before:mr-2"
+              >
+                {feat}
+              </p>
+            ))}
+          </div>
+          <div className="flex justify-center flex-wrap">
             {project.technologies.split(" ").map((technology, index) => (
               <span
                 key={index}
-                className="inline-block bg-gray-three text-white rounded-md px-2 py-1 m-1"
+                className="inline-block bg-gray-zero text-clean-white px-2 py-1 m-1 shadow-md font-firacode text-xs font-medium"
               >
                 {technology}
               </span>
@@ -64,13 +60,10 @@ export default function ProjectsModalContent() {
       </div>
       <footer>
         <div className="w-full flex justify-center items-center h-10 bg-gray-three text-clean-white font-raleway font-semibold gap-2">
-          <p>Acesse</p>
+          <Link href={project.deployURL}>{t("Common.visit")}</Link>
           <GoLinkExternal className="text-lg" />
         </div>
       </footer>
     </section>
   );
-}
-function useTranslation(arg0: string) {
-  throw new Error("Function not implemented.");
 }
