@@ -21,11 +21,14 @@ export default function ProjectsModal({projectIndex}: ProjectsModalProps) {
   const { setCurrentIndex, currentIndex} = useProjects();
 
   const openModalWithIndex = () => {
+    alert(projectIndex)
     setCurrentIndex((projectIndex ?? currentIndex));
     onOpen();
-    alert(projectIndex)
+    
   };
-
+const testClick =() => {
+  alert(projectIndex)
+}
   return (
     <>
       <ImEye
@@ -35,7 +38,7 @@ export default function ProjectsModal({projectIndex}: ProjectsModalProps) {
       <span onTouchStart={openModalWithIndex} role="button" onClick={openModalWithIndex}>
         <div className="absolute bottom-0 flex justify-center items-center right-0 ls:mr-8 bg-[#CFD3D6] m-2 p-1 rounded-full lg:hidden">
           <span>
-            <ImEye onTouchStart={openModalWithIndex} role="button" onClick={openModalWithIndex} className="text-2xl text-gray-three ls:text-4xl animate-pulse ease-in-out duration-1000" />
+            <ImEye onTouchStart={testClick} role="button" onClick={testClick} className="text-2xl text-gray-three ls:text-4xl animate-pulse ease-in-out duration-1000" />
           </span>
         </div>
       </span>
