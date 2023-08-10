@@ -36,39 +36,28 @@ export default function MobileSideBar() {
     { label: t("navList_contact_label"), href: "/contact" },
   ];
 
-  const breakpoints = {
-    sm: "30em", // 480px
-    md: "48em", // 768px
-    lg: "62em", // 992px
-    xl: "80em", // 1280px
-    "2xl": "96em", // 1536px
-  };
-
   return (
     <>
       <HamburgerIcon fontSize={"3xl"} marginLeft={"4"} onClick={onOpen} />
-      <Drawer placement={"left"} onClose={onClose} isOpen={isOpen}>
+      <Drawer placement={"top"} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent css={{ backgroundColor: "rgb(51, 51, 51)" }}>
           <DrawerCloseButton fontSize={"2xl"} textColor={"white"} />
-
-          <DrawerHeader className="flex justify-center items-center">
-            <div className="hidden xs:flex xs:max-w-[200px] xs:max-h-[200px]">
-              <Image
-                src="/me.webp"
-                alt="Image of an 30 years old man's face"
-                className="object-cover h-full w-full"
-                placeholder="blur"
-                width={200}
-                height={200}
-                blurDataURL="data:..."
-                priority={true}
-              />
-            </div>
+          <DrawerHeader margin="auto" className="hidden md:hidden ls:hidden xs:flex xs:max-w-[300px] sm:max-h-[300px]">
+            <Image
+              src="/me.webp"
+              alt="Image of an 30 years old man's face"
+              className="object-cover h-full w-full"
+              placeholder="blur"
+              width={300}
+              height={300}
+              blurDataURL="data:..."
+              priority={true}
+            />
           </DrawerHeader>
           <DrawerBody p={"0"}>
             <div className="flex flex-col items-center justify-evenly h-full text-clean-white ">
-              <ul className="w-full mb-6">
+              <ul className="w-full">
                 {navList.map((navItem, i) => (
                   <Link
                     key={i}
@@ -77,13 +66,13 @@ export default function MobileSideBar() {
                     tabIndex={0}
                     onClick={onClose}
                   >
-                    <li className="p-3 w-full text-center border-gray-two border-b">
+                    <li className="p-3 xs:p-2 w-full text-center border-gray-two border-b">
                       {navItem.label}
                     </li>
                   </Link>
                 ))}
               </ul>
-              <div className="flex text-2xl gap-4 text-clean-white">
+              <div className="flex text-2xl gap-4 p-3 text-clean-white">
                 <Link
                   tabIndex={0}
                   target="_blank"

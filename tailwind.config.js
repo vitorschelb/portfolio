@@ -20,6 +20,7 @@ module.exports = {
       },
       screens: {
         xs: "340px",
+        ls: "540px",
       },
       keyframes: {
         grow: {
