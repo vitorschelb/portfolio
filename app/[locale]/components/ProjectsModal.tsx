@@ -11,18 +11,16 @@ import {
 import ProjectsModalContent from "./ProjectsModalContent";
 import { ImEye } from "react-icons/im";
 import { AddIcon } from "@chakra-ui/icons";
-import { useProjects } from "@/app/contexts/ProjectsContext";
+import { useState } from "react";
 
-type ProjectsModalProps = {
-  projectIndex?: number;
-};
 
-export default function ProjectsModal({projectIndex}: ProjectsModalProps) {
+export default function ProjectsModal({projectIndex}: any) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { setCurrentIndex, currentIndex} = useProjects();
+  const [ currentIndex, setCurrentIndex ] = useState()
 
   const openModalWithIndex = () => {
-    setCurrentIndex((projectIndex ?? currentIndex));
+    alert("TESTE")
+    setCurrentIndex((projectIndex));
     onOpen();
   };
 

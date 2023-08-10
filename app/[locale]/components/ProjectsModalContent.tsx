@@ -13,7 +13,7 @@ export default function ProjectsModalContent() {
 
   return (
     <section>
-      <div className="flex max-w-full max-h-[300px] border-b-2 border-gray-three shadow-sm">
+      <div className="flex relative max-w-full max-h-[300px] border-b-2 border-gray-three shadow-sm">
         <Image
           priority={true}
           src={pictures[currentIndex]}
@@ -36,8 +36,8 @@ export default function ProjectsModalContent() {
         </div>
         <span className="block border-b border-gray-zero w-full" />
         <p className="text-justify text-sm">{t(`${project.id}.about`)}</p>
-        <div className="flex flex-col gap-2 mt-4">
-          <div className="flex flex-wrap justify-center">
+        <div className="flex flex-col gap-4 mt-4">
+          <div className="flex justify-between flex-wrap">
             {features.map((feat) => (
               <p
                 key={feat}
@@ -47,7 +47,7 @@ export default function ProjectsModalContent() {
               </p>
             ))}
           </div>
-          <div className="flex justify-center flex-wrap">
+          <div className="flex justify-between flex-wrap mb-6">
             {project.technologies.split(" ").map((technology, index) => (
               <span
                 key={index}
@@ -60,7 +60,7 @@ export default function ProjectsModalContent() {
         </div>
       </div>
       <footer>
-        <div className="w-full flex justify-center items-center h-10 bg-gray-three text-clean-white font-raleway font-semibold gap-2">
+        <div className="w-full absolute bottom-0 left-0 right-0 flex justify-center items-center h-10 bg-gray-three text-clean-white font-raleway font-semibold gap-2">
           <Link
             target="_blank"
             rel="noopener noreferrer"
