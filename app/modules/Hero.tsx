@@ -8,7 +8,7 @@ export default function Hero() {
   const t = useTranslations("Hero");
 
   return (
-    <section className="grid h-screen grid-cols-1 px-8 bg-clean-white md:grid-cols-2 md:px-20 md:gap-10 2xl:px-36">
+    <section className="grid h-screen grid-cols-1 px-8 bg-clean-white overflow-auto md:grid-cols-2 md:px-20 md:gap-10 2xl:px-36">
       <div className="flex flex-col justify-center gap-7 mt-10 ">
         <h1 className="tracking-widest">{t("presentation")}</h1>
         <h2 className="font-bold text-5xl font-poppins text-gray-three">
