@@ -10,17 +10,18 @@ import {
 } from "@chakra-ui/react";
 import ProjectsModalContent from "./ProjectsModalContent";
 import { ImEye } from "react-icons/im";
-import { AddIcon } from "@chakra-ui/icons";
-import { useState } from "react";
+import { useProjects } from "@/app/contexts/ProjectsContext";
 
+type ProjectsModalProps = {
+  projectIndex?: number;
+};
 
-export default function ProjectsModal({projectIndex}: any) {
+export default function ProjectsModal({projectIndex}: ProjectsModalProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [ currentIndex, setCurrentIndex ] = useState()
+  const { setCurrentIndex, currentIndex} = useProjects();
 
   const openModalWithIndex = () => {
-    alert("TESTE")
-    setCurrentIndex((projectIndex));
+    setCurrentIndex((projectIndex ?? currentIndex));
     onOpen();
   };
 
@@ -31,7 +32,7 @@ export default function ProjectsModal({projectIndex}: any) {
         className="text-[#CFD3D6] text-8xl group-hover:animate-float hidden lg:block"
       />
       <div className="absolute bottom-0 flex justify-center items-center right-0 ls:mr-8 bg-[#CFD3D6] m-2 p-1 rounded-full lg:hidden">
-        <AddIcon onClick={() => openModalWithIndex()} className="text-2xl text-gray-three ls:text-4xl animate-pulse ease-in-out duration-1000" />
+        <ImEye onClick={() => openModalWithIndex()} className="text-2xl text-gray-three ls:text-4xl animate-pulse ease-in-out duration-1000" />
       </div>
       <Modal
         size="xl"
