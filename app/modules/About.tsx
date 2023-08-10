@@ -39,7 +39,7 @@ export default function About() {
   const aboutList = t("about_list").split(".,");
 
   return (
-    <section className="h-screen bg-clean-white overflow-auto lg:no-scrollbar grid grid-cols-1 px-8 gap-10 md:px-20 lg:grid-cols-3 2xl:px-36 2xl:grid-cols-2 ">
+    <section className="h-screen bg-clean-white overflow-auto grid grid-cols-1 px-8 gap-10 md:px-20 lg:grid-cols-3 2xl:px-36 2xl:grid-cols-2 ">
       <div className="col-span-2 mt-24 flex flex-col gap-6 lg:justify-center 2xl:col-span-1">
         <div className="flex justify-around items-center">
           <h1 className="text-xl font-bold tracking-super mr-10 font-poppins text-gray-three">
