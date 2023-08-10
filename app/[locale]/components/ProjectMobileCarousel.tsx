@@ -26,7 +26,6 @@ export default function ProjectMobileCarousel() {
           modifier: 1,
           slideShadows: true,
         }}
-
         grabCursor={true}
         loop={true}
         slidesPerView={"auto"}
@@ -38,7 +37,7 @@ export default function ProjectMobileCarousel() {
         className="MySwiper"
       >
         {projectsData.map((projectItem, activeModalIndex) => (
-          <SwiperSlide key={activeModalIndex} onClick={() => setActiveModalIndex(activeModalIndex)}>
+          <SwiperSlide key={activeModalIndex} onClick={() => alert("CLICOU!")}>
             <div className="flex max-w-[600px] max-h-[700px] shadow-sm">
               <Image
                 priority={true}
