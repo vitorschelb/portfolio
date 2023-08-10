@@ -40,6 +40,7 @@ export default function ProjectsModal({projectIndex}: ProjectsModalProps) {
         scrollBehavior={"inside"}
         isOpen={isOpen}
         onClose={onClose}
+        trapFocus={false}
       >
         <ModalOverlay />
         <ModalContent borderRadius="none"
