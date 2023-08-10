@@ -16,32 +16,29 @@ type ProjectsModalProps = {
   projectIndex?: number;
 };
 
-export default function ProjectsModal({projectIndex}: ProjectsModalProps) {
+export default function ProjectsModal({ projectIndex }: ProjectsModalProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { setCurrentIndex, currentIndex} = useProjects();
+  const { setCurrentIndex, currentIndex } = useProjects();
 
   const openModalWithIndex = () => {
-    alert(projectIndex)
-    setCurrentIndex((projectIndex ?? currentIndex));
+    alert("MUDOU!");
+    setCurrentIndex(projectIndex ?? 0);
     onOpen();
-    
   };
-const testClick =() => {
-  alert(projectIndex)
-}
+
   return (
     <>
       <ImEye
         onClick={onOpen}
         className="text-[#CFD3D6] text-8xl group-hover:animate-float hidden lg:block"
       />
-      <span onTouchStart={openModalWithIndex} role="button" onClick={openModalWithIndex}>
-        <div className="absolute bottom-0 flex justify-center items-center right-0 ls:mr-8 bg-[#CFD3D6] m-2 p-1 rounded-full lg:hidden">
-          <span>
-            <ImEye onTouchStart={testClick} role="button" onClick={testClick} className="text-2xl text-gray-three ls:text-4xl animate-pulse ease-in-out duration-1000" />
-          </span>
-        </div>
-      </span>
+
+      <div className="absolute bottom-0 flex justify-center items-center right-0 ls:mr-8 bg-[#CFD3D6] m-2 p-1 rounded-full lg:hidden">
+        <ImEye
+          onClick={openModalWithIndex}
+          className="text-2xl text-gray-three ls:text-4xl animate-pulse ease-in-out duration-1000"
+        />
+      </div>
       <Modal
         size="xl"
         scrollBehavior={"inside"}
@@ -50,10 +47,9 @@ const testClick =() => {
         trapFocus={false}
       >
         <ModalOverlay />
-        <ModalContent borderRadius="none"
-        >
+        <ModalContent borderRadius="none">
           <ModalBody padding={0}>
-            <ProjectsModalContent  />
+            <ProjectsModalContent />
           </ModalBody>
           <ModalCloseButton
             boxShadow={"sm"}

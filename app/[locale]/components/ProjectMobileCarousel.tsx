@@ -35,10 +35,6 @@ export default function ProjectMobileCarousel() {
           clickable: true,
           dynamicBullets: true,
         }}
-        passiveListeners={false}
-        preventClicks={false}
-        preventClicksPropagation={false}
-        resizeObserver={true}
         className="MySwiper"
       >
         {projectsData.map((projectItem, activeModalIndex) => (
