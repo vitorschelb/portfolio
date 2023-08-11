@@ -9,16 +9,11 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import ProjectsModal from "./ProjectsModal";
 import projectsData from "@/app/shared/Data";
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 
 export default function ProjectMobileCarousel() {
   const t = useTranslations("ProjectsCard");
-  const [activeModalIndex, setActiveModalIndex] = useState(0);
-
-  const openModal = (index: SetStateAction<number>) => {
-    setActiveModalIndex(index); // Atualiza o índice ativo do modal
-    alert("CLICOU!")
-  };
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState<number | undefined>(undefined)
 
   return (
     <div className="lg:hidden z-0 flex justify-center items-center p-2 my-6 bg-[#CFD3D6]">
@@ -42,7 +37,7 @@ export default function ProjectMobileCarousel() {
         className="MySwiper"
       >
         {projectsData.map((projectItem, index) => (
-          <SwiperSlide key={index} onClick={() => openModal(index)}>
+          <SwiperSlide key={index} onClick={() => alert(selectedProjectIndex)}>
             <div className="flex max-w-[600px] max-h-[700px] shadow-sm">
               <Image
                 priority={true}
@@ -57,10 +52,10 @@ export default function ProjectMobileCarousel() {
               <h1 className="font-poppins text-xs font-semibold text-gray-three tracking-widest shadow-sm bg-[#CFD3D6] absolute m-2 p-1">
                 {t(`${projectItem.id}.title`)}
               </h1>
-              <ProjectsModal projectIndex={activeModalIndex} />
             </div>
           </SwiperSlide>
         ))}
+        <ProjectsModal index={selectedProjectIndex} />
         <div className="swiper-pagination"></div>
       </Swiper>
     </div>

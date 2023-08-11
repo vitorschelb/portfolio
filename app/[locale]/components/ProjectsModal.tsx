@@ -14,16 +14,15 @@ import { useProjects } from "@/app/contexts/ProjectsContext";
 import { useState } from "react";
 
 type ProjectsModalProps = {
-  projectIndex?: number;
+  index?: number;
 };
 
-export default function ProjectsModal({ projectIndex }: ProjectsModalProps) {
+export default function ProjectsModal({ index }: ProjectsModalProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { setCurrentIndex} = useProjects();
   
   const openModalWithIndex = () => {
-    alert("CLICOU NO OLHO!");
-    setCurrentIndex(projectIndex ?? 0);
+    setCurrentIndex(index ?? 0);
     onOpen();
   };
 
@@ -34,10 +33,10 @@ export default function ProjectsModal({ projectIndex }: ProjectsModalProps) {
         className="text-[#CFD3D6] text-8xl group-hover:animate-float hidden lg:block"
       />
 
-      <div className="absolute bottom-0 flex justify-center items-center right-0 ls:mr-8 bg-[#CFD3D6] m-2 p-1 rounded-full lg:hidden">
+      <div className="flex justify-center items-center right-0 ls:mr-8 bg-[#CFD3D6] m-2 p-1 rounded-full lg:hidden">
         <ImEye
           onClick={openModalWithIndex}
-          className="text-4xl absolute text-gray-three ls:text-4xl animate-pulse ease-in-out duration-1000"
+          className="text-4xl text-gray-three ls:text-4xl animate-pulse ease-in-out duration-1000"
         />
       </div>
       <Modal
