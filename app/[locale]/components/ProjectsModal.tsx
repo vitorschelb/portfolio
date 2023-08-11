@@ -14,7 +14,7 @@ import { useProjects } from "@/app/contexts/ProjectsContext";
 
 
 type ProjectsModalProps = {
-  index: number;
+  index?: number;
 };
 
 export default function ProjectsModal({ index }: ProjectsModalProps) {
@@ -22,7 +22,7 @@ export default function ProjectsModal({ index }: ProjectsModalProps) {
   const {setCurrentIndex} = useProjects()
 
   const openWithMobileIndex = () => {
-    setCurrentIndex(index)
+    setCurrentIndex(index ?? 0)
     onOpen()
    }
 
