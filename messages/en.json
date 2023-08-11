@@ -22,17 +22,24 @@
     "my-portfolio": {
       "title": "Portfolio",
       "description": "Personal portfolio with autoral design.",
-      "subtitle": "Turning Ideas into Digital Solutions.",
+      "subtitle": "Turning Ideas into Digital Solutions",
       "about": "Within my personal portfolio, you'll discover a collection of projects and ventures that showcase my ability to transform ideas into relevant digital solutions. All of this is achieved through an accessible and minimalist interface, designed to provide the best user experience.",
       "features": "Design responsivo e acessível,Navegação Intuitiva,Animações fluídas,Carregamento rápido,Multilíngue,Segurança"
     },
     "podcodar-app": {
       "title": "PodCodarApp",
       "description": "PodCodar App is a platform that connects Dev community. [Under development].",
-      "subtitle": "Democratizing Learning through Collaboration.",
+      "subtitle": "Democratizing Learning through Collaboration",
       "about": "The PodCodar App is an ongoing project, tailored specifically for the PodCodar community's internal use. The MVP (Minimum Viable Product) features functionalities such as authentication, registration, and even a seamless onboarding process for new members. Moreover, we're actively engaging with databases and crafting personalized profiles. And the excitement doesn't end there! We're currently working on an administrative interface, developing a dynamic system for scheduling new member orientations, and many other exciting features that will be available soon!",
       "features": "Scalability,Responsiveness,Accessibility,Intuitive Navigation,Optimized Performance,Reliability,Security Standards,Data Privacy"
     },
+"ecommerce-app": {
+  "title": "BellezzaStore",
+  "description": "From filtering to order completion, the platform offers a comprehensive online shopping experience.",
+  "subtitle": "Browse, Choose, Pay - All in One Place.",
+  "about": "Discover an enhanced online shopping experience with this e-commerce project. Built with Next.js and TypeScript, the website offers advanced filtering and efficient search, powered by UseShoppingCart and secure payment processing through Stripe. Simple and practical interface, crafted with Tailwind CSS and Radix UI, ensures intuitive and responsive navigation. With effective content management through Sanity, the website deliver a complete and reliable online shopping solution.",
+  "features": "Filtering,Cart,Payments,Inventory,Scalability"
+},
     "Common": {
       "features": "Features",
       "technologies": "Technologies",

@@ -30,9 +30,16 @@
     "podcodar-app": {
       "title": "PodCodarApp",
       "description": "PodCodar App é uma plataforma que conecta a comunidade de desenvolvedores. [Em desenvolvimento].",
-      "subtitle": "Democratizando o Aprendizado por meio da Colaboração.",
+      "subtitle": "Democratizando o Aprendizado por meio da Colaboração",
       "about": "O PodCodar App é um projeto em desenvolvimento, feito especialmente para a comunidade interna da PodCodar. O MVP (Produto Mínimo Viável) conta com funcionalidades de autenticação, inscrição, registro e até mesmo um processo de integração suave para os novos membros. Além disso, estamos interagindo com bancos de dados e criando perfis personalizados. E as novidades não param por aí! Estamos atualmente trabalhando na interface administrativa, criando um sistema dinâmico de agendamento para receber os novos membros e muitos outros recursos emocionantes que estarão disponíveis em breve!",
       "features": "Escalabilidade,Responsividade,Acessibilidade,Navegação Intuitiva,Desempenho Otimizado,Confiabilidade,Privacidade dos Dados"
+    },
+    "ecommerce-app": {
+      "title": "BellezzaStore",
+      "description": "Do filtro à finalização do pedido, a plataforma oferece uma experiência de compras online completa.",
+      "subtitle": "Navegar, Escolher, Pagar - Tudo em um Só Lugar",
+      "about": "Descubra uma experiência de compras online aprimorada com esse projeto de e-commerce. Desenvolvido com Next.js e TypeScript, o site oferece filtragem avançada e busca eficiente, impulsionado pelo UseShoppingCart e processamento seguro de pagamentos através do Stripe. Interface simples e prática, construída com Tailwind CSS e Radix UI, garante uma navegação intuitiva e responsiva. Com gerenciamento de conteúdo eficaz via Sanity,  proporciona uma solução de compras online completa e confiável.",
+      "features": "Filtragem,Carrinho,Pagamentos,Estoque,Scalability"
     },
     "Common": {
       "features": "Características",
