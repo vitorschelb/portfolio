@@ -11,6 +11,7 @@ import {
 import ProjectsModalContent from "./ProjectsModalContent";
 import { ImEye } from "react-icons/im";
 import { useProjects } from "@/app/contexts/ProjectsContext";
+import { useTranslations } from "next-intl";
 
 
 type ProjectsModalProps = {
@@ -20,6 +21,7 @@ type ProjectsModalProps = {
 export default function ProjectsModal({ index }: ProjectsModalProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const {setCurrentIndex} = useProjects()
+  const t = useTranslations("ProjectsCard");
 
   const openWithMobileIndex = () => {
     setCurrentIndex(index ?? 0)
@@ -34,12 +36,12 @@ export default function ProjectsModal({ index }: ProjectsModalProps) {
         className="text-[#CFD3D6] text-8xl group-hover:animate-float hidden lg:block"
       />
 
-      <div className="flex justify-center items-center right-0 ls:mr-8 bg-[#CFD3D6] m-2 p-1 rounded-full lg:hidden">
-        <ImEye
+        <button
           onClick={openWithMobileIndex}
-          className="text-4xl text-gray-three ls:text-4xl animate-pulse ease-in-out duration-1000"
-        />
-      </div>
+          className="font-raleway mt-2 font-semibold w-full text-clean-white flex justify-center bg-gray-three p-2 shadow-md lg:hidden">
+            {t("Common.detailsButton")}
+        </button>
+  
       <Modal
         size="xl"
         scrollBehavior={"inside"}

@@ -21,8 +21,8 @@ export default function ProjectMobileCarousel() {
   // };
 
   return (
-    <>
-      <div className="lg:hidden z-0 flex justify-center items-center p-2 my-6 bg-[#CFD3D6]">
+    <div className="lg:hidden z-0 flex flex-col justify-center items-center p-2 my-6 bg-[#CFD3D6]">
+      <div>
         <Swiper
           effect={"coverflow"}
           coverflowEffect={{
@@ -69,6 +69,6 @@ export default function ProjectMobileCarousel() {
         </Swiper>
       </div>
       <ProjectsModal index={selectedProjectIndex} />
-    </>
+    </div>
   );
 }

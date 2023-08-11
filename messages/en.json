@@ -36,7 +36,8 @@
     "Common": {
       "features": "Features",
       "technologies": "Technologies",
-      "visit": "Visit"
+      "visit": "Visit",
+      "detailsButton": "More Info"
     }
   },
   "Contact": {

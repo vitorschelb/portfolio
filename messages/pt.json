@@ -37,7 +37,8 @@
     "Common": {
       "features": "Características",
       "technologies": "Tecnologias",
-      "visit": "Visitar"
+      "visit": "Visitar",
+      "detailsButton": "Saiba Mais"
     }
   },
   "Contact": {
