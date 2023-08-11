@@ -11,20 +11,21 @@ import {
 import ProjectsModalContent from "./ProjectsModalContent";
 import { ImEye } from "react-icons/im";
 import { useProjects } from "@/app/contexts/ProjectsContext";
-import { useState } from "react";
+
 
 type ProjectsModalProps = {
-  index?: number;
+  index: number;
 };
 
 export default function ProjectsModal({ index }: ProjectsModalProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { setCurrentIndex} = useProjects();
-  
-  const openModalWithIndex = () => {
-    setCurrentIndex(index ?? 0);
-    onOpen();
-  };
+  const {setCurrentIndex} = useProjects()
+
+  const openWithMobileIndex = () => {
+    setCurrentIndex(index)
+    onOpen()
+   }
+
 
   return (
     <>
@@ -35,7 +36,7 @@ export default function ProjectsModal({ index }: ProjectsModalProps) {
 
       <div className="flex justify-center items-center right-0 ls:mr-8 bg-[#CFD3D6] m-2 p-1 rounded-full lg:hidden">
         <ImEye
-          onClick={openModalWithIndex}
+          onClick={openWithMobileIndex}
           className="text-4xl text-gray-three ls:text-4xl animate-pulse ease-in-out duration-1000"
         />
       </div>
