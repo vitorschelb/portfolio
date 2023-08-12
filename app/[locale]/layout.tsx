@@ -15,7 +15,7 @@ const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Vitor Schelb Portfolio",
-  description: "This is my personal website.",
+  description: "Turning Ideas into Digital Solutions",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",

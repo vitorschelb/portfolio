@@ -28,9 +28,9 @@
     },
     "podcodar-app": {
       "title": "PodCodarApp",
-      "description": "PodCodar App is a platform that connects Dev community. [Under development].",
+      "description": "PodCodar App is a platform that connects Dev community.",
       "subtitle": "Democratizing Learning through Collaboration",
-      "about": "The PodCodar App is an ongoing project, tailored specifically for the PodCodar community's internal use. The MVP (Minimum Viable Product) features functionalities such as authentication, registration, and even a seamless onboarding process for new members. Moreover, we're actively engaging with databases and crafting personalized profiles. And the excitement doesn't end there! We're currently working on an administrative interface, developing a dynamic system for scheduling new member orientations, and many other exciting features that will be available soon!",
+      "about": "The PodCodar App is an ongoing project, tailored specifically for the PodCodar community's internal use. The MVP (Minimum Viable Product) features functionalities such as authentication, registration, and even a seamless onboarding process for new members. Moreover, we're actively engaging with databases and crafting personalized profiles. And the excitement doesn't end there! We're currently working on an administrative interface, developing a dynamic system for scheduling new member orientations, and many other exciting features that will be available soon! [in development]",
       "features": "Scalability,Responsiveness,Accessibility,Intuitive Navigation,Optimized Performance,Reliability,Security Standards,Data Privacy"
     },
 "ecommerce-app": {
