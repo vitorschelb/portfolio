@@ -53,7 +53,7 @@ export default function Sidebar() {
             rel="noopener noreferrer"
             href="https://www.linkedin.com/in/vitor-schelb-37b109124/?originalSubdomain=br"
           >
-            <Tooltip label="GitHub">
+            <Tooltip label="LinkedIn">
               <span>
                 <SiLinkedin className="hover:text-gray-two ease-in-out duration-500 hover:animate-pulse" />
               </span>
