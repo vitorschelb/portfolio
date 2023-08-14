@@ -38,7 +38,7 @@ export default function MobileSideBar() {
 
   return (
     <>
-      <HamburgerIcon fontSize={"3xl"} marginLeft={"4"} onClick={onOpen} />
+      <HamburgerIcon fontSize={"3xl"} marginRight={"4"} onClick={onOpen} />
       <Drawer placement={"top"} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent css={{ backgroundColor: "rgb(51, 51, 51)" }}>
