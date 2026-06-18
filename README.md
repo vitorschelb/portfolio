@@ -11,11 +11,7 @@ A professional portfolio built with **Next.js**, **TypeScript**, and **Tailwind 
 ## Screenshots
 
 <div align="center">
-  <img src="./public/screenshots/screenshot1.png" alt="Screenshot 1" width="100%" />
-  <br/><br/>
   <img src="./public/screenshots/demo.gif" alt="Demo" width="100%" />
-  <br/><br/>
-  <img src="./public/screenshots/screenshot3.png" alt="Screenshot 3" width="100%" />
 </div>
 
 ---
