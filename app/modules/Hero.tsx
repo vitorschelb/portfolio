@@ -1,11 +1,28 @@
 "use client";
 import Image from "next/image";
-import Typed from "react-typed";
+import { useEffect, useRef } from "react";
+import Typed from "typed.js";
 import Button from "../[locale]/components/Button";
 import { useTranslations } from "next-intl";
 
 export default function Hero() {
   const t = useTranslations("Hero");
+  const typedRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    if (!typedRef.current) return;
+
+    const typed = new Typed(typedRef.current, {
+      strings: ["Front-end developer"],
+      typeSpeed: 100,
+      backSpeed: 50,
+      loop: true,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
 
   return (
     <section className="grid h-screen grid-cols-1 px-8 bg-clean-white overflow-auto md:grid-cols-2 md:px-20 md:gap-10 2xl:px-36">
@@ -18,12 +35,9 @@ export default function Hero() {
 
         <h2 className="font-light text-xl tracking-tighter h-8 font-poppins text-gray-zero mb-6 md:text-2xl md:tracking-normal">
           Dynamic{" "}
-          <Typed
+          <span
+            ref={typedRef}
             className="font-bold text-gray-three font-open-sans"
-            strings={["Front-end developer"]}
-            typeSpeed={100}
-            backSpeed={50}
-            loop
           />
         </h2>
         <p className="text-justify mb-6 text-gray-zero">{t("description")}</p>
